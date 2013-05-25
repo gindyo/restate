@@ -1,29 +1,14 @@
-angular.module('Services').service 'StockSupplier', ->
+window.stock_quote_callback = (data)->
+  window.stock_quote_result = data
 
-  YQLQuery = (query, callback) ->
-    @query = query
-    @callback = callback or ->
-
-    @fetch = ->
-      throw new Error("YQLQuery.fetch(): Parameters may be undefined")  if not @query or not @callback
-      scriptEl = document.createElement("script")
-      uid = "yql" + +new Date()
-      encodedQuery = encodeURIComponent(@query.toLowerCase())
-      instance = this
-      YQLQuery[uid] = (json) ->
-        instance.callback json
-        delete YQLQuery[uid]
-
-        document.body.removeChild scriptEl
-
-      scriptEl.src = "http://query.yahooapis.com/v1/public/yql?q=" + encodedQuery + "&format=json&callback=YQLQuery." + uid
-      document.body.appendChild scriptEl
-  
-get_stock = (symbol)->
-  q = 'select * from yahoo.finance.quotes where symbol in ('+symbol+')&format=json&diagnostics=true&env=http%3A%2F%2Fdatatables.org%2Falltables.env'
-  
-  
-{
-  find: (id)-> properties[id]
-  get_stock: (symbol)-> get_stock(symbol)
-}
+angular.module('Services').service 'StockSupplier', ($http, $q)->
+  get_stock = (symbol, callback)->
+    q = 'select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22'+symbol+'%22)&format=json&diagnostics=true&env=http%3A%2F%2Fdatatables.org%2Falltables.env&callback=window.stock_quote_callback'
+    url = 'http://query.yahooapis.com/v1/public/yql?q='+q 
+    $http.jsonp(url).success (data)->
+      alert 'hi'
+      callback(data)
+  {
+    find: (id)-> properties[id]
+    get_stock: (symbol, callback)-> get_stock(symbol, callback)
+  }

@@ -38,6 +38,7 @@
         <label>Search for stock 
           <br>(any stock)</label>
         <input type='text' ng-model = "stock_symbol" >
+        <input id='stock_result' ng-model = 'stock_result' class='hide' >
         <button ng-click = "stock_search()" class='btn btn-submit'>Submit</button> 
       </div>
     </div>
@@ -62,9 +63,6 @@
     <script src="scripts/services/property_supplier.js"></script>
     <script src="scripts/services/stock_supplier.js"></script>
     <!-- endbuild -->
-    <div class=''>
-      <iframe src="http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22YHOO%22)%0A%09%09&format=json&diagnostics=true&env=http%3A%2F%2Fdatatables.org%2Falltables.env&callback=cbfunc" id='results'></iframe>
-    </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

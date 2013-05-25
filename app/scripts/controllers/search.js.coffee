@@ -8,4 +8,5 @@ angular.module('realEstateApp')
     else 
       $location.path '/not_found'
   $scope.stock_search = ->
-    symbol = StockSupplier.get_stock $scope.stock_symbol
+    StockSupplier.get_stock $scope.stock_symbol, ->
+      console.log 'result is ' + window.stock_quote_result
