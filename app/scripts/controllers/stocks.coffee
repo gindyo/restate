@@ -5,4 +5,3 @@ angular.module('realEstateApp')
     
     $scope.stock = {symbol: 'N/A', LastTradePriceOnly: 'N/A'}
     $scope.stock = StockRepository.search_results.quote  if StockRepository.search_results
-    console.log $scope.stock

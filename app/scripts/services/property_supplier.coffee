@@ -15,5 +15,10 @@ angular.module('Services').service 'PropertySupplier', ->
   ]
   
   {
-    find: (id)-> properties[id]
+    find: (id)-> 
+      query = { property_found: false}
+      if properties[id]
+        query.property = properties[id]
+        query.property_found = true
+      query
   }

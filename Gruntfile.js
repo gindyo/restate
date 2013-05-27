@@ -25,7 +25,7 @@ module.exports = function (grunt) {
         tasks: ['coffee:dist']
       },
       coffeeTest: {
-        files: ['test/spec/{,*/}*.coffee'],
+        files: ['test/spec/{,*/}*.coffee','app/{,*/}*.coffee'],
         tasks: ['coffee:test']
       },
       compass: {
@@ -100,7 +100,7 @@ module.exports = function (grunt) {
     karma: {
       unit: {
         configFile: 'karma.conf.js',
-        singleRun: true
+        autoWatch: true
       }
     },
     coffee: {
@@ -109,7 +109,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.app %>/scripts',
           src: '{,*/}*.coffee',
-          dest: '.tmp/scripts',
+          dest:'<%= yeoman.app %>/scripts',
           ext: '.js'
         }]
       },
@@ -118,7 +118,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'test/spec',
           src: '{,*/}*.coffee',
-          dest: '.tmp/spec',
+          dest: 'test/spec',
           ext: '.js'
         }]
       }
