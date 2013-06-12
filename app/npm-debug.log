@@ -1,0 +1,1050 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'coffee-script' ]
+2 info using npm@1.2.21
+3 info using node@v0.10.7
+4 verbose read json /usr/local/lib/package.json
+5 verbose read json /usr/local/lib/package.json
+6 verbose cache add [ 'coffee-script', null ]
+7 verbose cache add name=undefined spec="coffee-script" args=["coffee-script",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'coffee-script',
+8 verbose parsed url   path: 'coffee-script',
+8 verbose parsed url   href: 'coffee-script' }
+9 silly lockFile ab358269-coffee-script coffee-script
+10 verbose lock coffee-script /home/dimitar/.npm/ab358269-coffee-script.lock
+11 silly lockFile ab358269-coffee-script coffee-script
+12 silly lockFile ab358269-coffee-script coffee-script
+13 verbose addNamed [ 'coffee-script', '' ]
+14 verbose addNamed [ null, '' ]
+15 silly lockFile 53951495-coffee-script coffee-script@
+16 verbose lock coffee-script@ /home/dimitar/.npm/53951495-coffee-script.lock
+17 silly addNameRange { name: 'coffee-script', range: '', hasData: false }
+18 verbose url raw coffee-script
+19 verbose url resolving [ 'https://registry.npmjs.org/', './coffee-script' ]
+20 verbose url resolved https://registry.npmjs.org/coffee-script
+21 info trying registry request attempt 1 at 20:48:53
+22 verbose etag "3BY1DT1QAT2AQVC3978S0367N"
+23 http GET https://registry.npmjs.org/coffee-script
+24 http 304 https://registry.npmjs.org/coffee-script
+25 silly registry.get cb [ 304,
+25 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+25 silly registry.get     etag: '"3BY1DT1QAT2AQVC3978S0367N"',
+25 silly registry.get     date: 'Sun, 26 May 2013 00:48:53 GMT',
+25 silly registry.get     'content-length': '0' } ]
+26 verbose etag coffee-script from cache
+27 silly addNameRange number 2 { name: 'coffee-script', range: '', hasData: true }
+28 silly addNameRange versions [ 'coffee-script',
+28 silly addNameRange   [ '0.7.0',
+28 silly addNameRange     '0.7.1',
+28 silly addNameRange     '0.7.2',
+28 silly addNameRange     '0.9.0',
+28 silly addNameRange     '0.9.1',
+28 silly addNameRange     '0.9.2',
+28 silly addNameRange     '0.9.3',
+28 silly addNameRange     '0.9.4',
+28 silly addNameRange     '0.9.5',
+28 silly addNameRange     '0.9.6',
+28 silly addNameRange     '1.0.0',
+28 silly addNameRange     '1.0.1',
+28 silly addNameRange     '1.1.0',
+28 silly addNameRange     '1.1.1',
+28 silly addNameRange     '1.1.2',
+28 silly addNameRange     '1.1.3',
+28 silly addNameRange     '1.2.0',
+28 silly addNameRange     '1.3.0',
+28 silly addNameRange     '1.3.1',
+28 silly addNameRange     '1.3.2',
+28 silly addNameRange     '1.3.3',
+28 silly addNameRange     '1.4.0',
+28 silly addNameRange     '1.5.0',
+28 silly addNameRange     '1.6.0',
+28 silly addNameRange     '1.6.1',
+28 silly addNameRange     '1.6.2' ] ]
+29 verbose addNamed [ 'coffee-script', '1.6.2' ]
+30 verbose addNamed [ '1.6.2', '1.6.2' ]
+31 silly lockFile 0166e586-coffee-script-1-6-2 coffee-script@1.6.2
+32 verbose lock coffee-script@1.6.2 /home/dimitar/.npm/0166e586-coffee-script-1-6-2.lock
+33 verbose read json /home/dimitar/.npm/coffee-script/1.6.2/package/package.json
+34 silly lockFile 0166e586-coffee-script-1-6-2 coffee-script@1.6.2
+35 silly lockFile 0166e586-coffee-script-1-6-2 coffee-script@1.6.2
+36 silly lockFile 53951495-coffee-script coffee-script@
+37 silly lockFile 53951495-coffee-script coffee-script@
+38 silly resolved [ { name: 'coffee-script',
+38 silly resolved     description: 'Unfancy JavaScript',
+38 silly resolved     keywords: [ 'javascript', 'language', 'coffeescript', 'compiler' ],
+38 silly resolved     author: { name: 'Jeremy Ashkenas' },
+38 silly resolved     version: '1.6.2',
+38 silly resolved     licenses: [ [Object] ],
+38 silly resolved     engines: { node: '>=0.8.0' },
+38 silly resolved     directories: { lib: './lib/coffee-script' },
+38 silly resolved     main: './lib/coffee-script/coffee-script',
+38 silly resolved     bin: { coffee: './bin/coffee', cake: './bin/cake' },
+38 silly resolved     scripts: { test: 'node ./bin/cake test' },
+38 silly resolved     homepage: 'http://coffeescript.org',
+38 silly resolved     bugs: { url: 'https://github.com/jashkenas/coffee-script/issues' },
+38 silly resolved     repository:
+38 silly resolved      { type: 'git',
+38 silly resolved        url: 'git://github.com/jashkenas/coffee-script.git' },
+38 silly resolved     devDependencies: { 'uglify-js': '~2.2', jison: '>=0.2.0' },
+38 silly resolved     readme: '\n            {\n         }   }   {\n        {   {  }  }\n         }   }{  {\n        {  }{  }  }                    _____       __  __\n       ( }{ }{  { )                   / ____|     / _|/ _|\n     .- { { }  { }} -.               | |     ___ | |_| |_ ___  ___\n    (  ( } { } { } }  )              | |    / _ \\|  _|  _/ _ \\/ _ \\\n    |`-..________ ..-\'|              | |___| (_) | | | ||  __/  __/\n    |                 |               \\_____\\___/|_| |_| \\___|\\___|\n    |                 ;--.\n    |                (__  \\            _____           _       _\n    |                 | )  )          / ____|         (_)     | |\n    |                 |/  /          | (___   ___ _ __ _ _ __ | |_\n    |                 (  /            \\___ \\ / __| \'__| | \'_ \\| __|\n    |                 |/              ____) | (__| |  | | |_) | |_\n    |                 |              |_____/ \\___|_|  |_| .__/ \\__|\n     `-.._________..-\'                                  | |\n                                                        |_|\n\n\n  CoffeeScript is a little language that compiles into JavaScript.\n\n  Install Node.js, and then the CoffeeScript compiler:\n  sudo bin/cake install\n\n  Or, if you have the Node Package Manager installed:\n  npm install -g coffee-script\n  (Leave off the -g if you don\'t wish to install globally.)\n\n  Execute a script:\n  coffee /path/to/script.coffee\n\n  Compile a script:\n  coffee -c /path/to/script.coffee\n\n  For documentation, usage, and examples, see:\n  http://coffeescript.org/\n\n  To suggest a feature, report a bug, or general discussion:\n  http://github.com/jashkenas/coffee-script/issues/\n\n  If you\'d like to chat, drop by #coffeescript on Freenode IRC,\n  or on webchat.freenode.net.\n\n  The source repository:\n  git://github.com/jashkenas/coffee-script.git\n\n  All contributors are listed here:\n  http://github.com/jashkenas/coffee-script/contributors\n',
+38 silly resolved     readmeFilename: 'README',
+38 silly resolved     _id: 'coffee-script@1.6.2',
+38 silly resolved     _from: 'coffee-script@' } ]
+39 info install coffee-script@1.6.2 into /usr/local/lib
+40 info installOne coffee-script@1.6.2
+41 verbose from cache /home/dimitar/.npm/coffee-script/1.6.2/package/package.json
+42 info /usr/local/lib/node_modules/coffee-script unbuild
+43 verbose read json /usr/local/lib/node_modules/coffee-script/package.json
+44 verbose tar unpack /home/dimitar/.npm/coffee-script/1.6.2/package.tgz
+45 silly lockFile 7b01d0c2-l-lib-node-modules-coffee-script /usr/local/lib/node_modules/coffee-script
+46 verbose lock /usr/local/lib/node_modules/coffee-script /home/dimitar/.npm/7b01d0c2-l-lib-node-modules-coffee-script.lock
+47 silly lockFile ec1bb1a0--coffee-script-1-6-2-package-tgz /home/dimitar/.npm/coffee-script/1.6.2/package.tgz
+48 verbose lock /home/dimitar/.npm/coffee-script/1.6.2/package.tgz /home/dimitar/.npm/ec1bb1a0--coffee-script-1-6-2-package-tgz.lock
+49 silly gunzTarPerm modes [ '755', '644' ]
+50 silly gunzTarPerm extractEntry package.json
+51 silly gunzTarPerm extractEntry .npmignore
+52 silly gunzTarPerm extractEntry README
+53 silly gunzTarPerm extractEntry LICENSE
+54 silly gunzTarPerm extractEntry CNAME
+55 silly gunzTarPerm extractEntry CONTRIBUTING.md
+56 silly gunzTarPerm extractEntry Rakefile
+57 silly gunzTarPerm extractEntry bin/cake
+58 silly gunzTarPerm extractEntry bin/coffee
+59 silly gunzTarPerm extractEntry extras/jsl.conf
+60 silly gunzTarPerm extractEntry lib/coffee-script/browser.js
+61 silly gunzTarPerm extractEntry lib/coffee-script/grammar.js
+62 silly gunzTarPerm extractEntry lib/coffee-script/helpers.js
+63 silly gunzTarPerm extractEntry lib/coffee-script/index.js
+64 silly gunzTarPerm extractEntry lib/coffee-script/command.js
+65 silly gunzTarPerm extractEntry lib/coffee-script/nodes.js
+66 silly gunzTarPerm extractEntry lib/coffee-script/optparse.js
+67 silly gunzTarPerm extractEntry lib/coffee-script/parser.js
+68 silly gunzTarPerm extractEntry lib/coffee-script/repl.js
+69 silly gunzTarPerm extractEntry lib/coffee-script/rewriter.js
+70 silly gunzTarPerm extractEntry lib/coffee-script/coffee-script.js
+71 silly gunzTarPerm extractEntry lib/coffee-script/scope.js
+72 silly gunzTarPerm extractEntry lib/coffee-script/cake.js
+73 silly gunzTarPerm extractEntry lib/coffee-script/sourcemap.js
+74 silly gunzTarPerm extractEntry lib/coffee-script/lexer.js
+75 verbose read json /usr/local/lib/node_modules/coffee-script/package.json
+76 silly lockFile 7b01d0c2-l-lib-node-modules-coffee-script /usr/local/lib/node_modules/coffee-script
+77 silly lockFile 7b01d0c2-l-lib-node-modules-coffee-script /usr/local/lib/node_modules/coffee-script
+78 silly lockFile ec1bb1a0--coffee-script-1-6-2-package-tgz /home/dimitar/.npm/coffee-script/1.6.2/package.tgz
+79 silly lockFile ec1bb1a0--coffee-script-1-6-2-package-tgz /home/dimitar/.npm/coffee-script/1.6.2/package.tgz
+80 info preinstall coffee-script@1.6.2
+81 verbose from cache /usr/local/lib/node_modules/coffee-script/package.json
+82 verbose readDependencies using package.json deps
+83 verbose from cache /usr/local/lib/node_modules/coffee-script/package.json
+84 verbose readDependencies using package.json deps
+85 silly resolved []
+86 verbose about to build /usr/local/lib/node_modules/coffee-script
+87 info build /usr/local/lib/node_modules/coffee-script
+88 verbose from cache /usr/local/lib/node_modules/coffee-script/package.json
+89 verbose linkStuff [ true,
+89 verbose linkStuff   '/usr/local/lib/node_modules',
+89 verbose linkStuff   true,
+89 verbose linkStuff   '/usr/local/lib/node_modules' ]
+90 info linkStuff coffee-script@1.6.2
+91 verbose read json /var/www/restate/app/package.json
+92 verbose linkBins coffee-script@1.6.2
+93 verbose link bins [ { coffee: './bin/coffee', cake: './bin/cake' },
+93 verbose link bins   '/usr/local/bin',
+93 verbose link bins   true ]
+94 verbose linkMans coffee-script@1.6.2
+95 verbose rebuildBundles coffee-script@1.6.2
+96 info install coffee-script@1.6.2
+97 info postinstall coffee-script@1.6.2
+98 verbose read json /usr/local/lib/package.json
+99 verbose read json /usr/local/lib/node_modules/bower/package.json
+100 verbose from cache /usr/local/lib/node_modules/coffee-script/package.json
+101 verbose read json /usr/local/lib/node_modules/generator-angular/package.json
+102 verbose read json /usr/local/lib/node_modules/generator-karma/package.json
+103 verbose read json /usr/local/lib/node_modules/grunt-cli/package.json
+104 verbose read json /usr/local/lib/node_modules/n/package.json
+105 verbose read json /usr/local/lib/node_modules/npm/package.json
+106 verbose read json /usr/local/lib/node_modules/testacular/package.json
+107 verbose read json /usr/local/lib/node_modules/yo/package.json
+108 verbose read json /usr/local/lib/node_modules/bower/node_modules/abbrev/package.json
+109 verbose read json /usr/local/lib/node_modules/bower/node_modules/archy/package.json
+110 verbose read json /usr/local/lib/node_modules/bower/node_modules/async/package.json
+111 verbose read json /usr/local/lib/node_modules/bower/node_modules/colors/package.json
+112 verbose read json /usr/local/lib/node_modules/bower/node_modules/fstream/package.json
+113 verbose read json /usr/local/lib/node_modules/bower/node_modules/glob/package.json
+114 verbose read json /usr/local/lib/node_modules/bower/node_modules/hogan.js/package.json
+115 verbose read json /usr/local/lib/node_modules/bower/node_modules/lodash/package.json
+116 verbose read json /usr/local/lib/node_modules/bower/node_modules/mkdirp/package.json
+117 verbose read json /usr/local/lib/node_modules/bower/node_modules/nopt/package.json
+118 verbose read json /usr/local/lib/node_modules/bower/node_modules/promptly/package.json
+119 verbose read json /usr/local/lib/node_modules/bower/node_modules/rc/package.json
+120 verbose read json /usr/local/lib/node_modules/bower/node_modules/read-package-json/package.json
+121 verbose read json /usr/local/lib/node_modules/bower/node_modules/request/package.json
+122 verbose read json /usr/local/lib/node_modules/bower/node_modules/rimraf/package.json
+123 verbose read json /usr/local/lib/node_modules/bower/node_modules/semver/package.json
+124 verbose read json /usr/local/lib/node_modules/bower/node_modules/stable/package.json
+125 verbose read json /usr/local/lib/node_modules/bower/node_modules/tar/package.json
+126 verbose read json /usr/local/lib/node_modules/bower/node_modules/tmp/package.json
+127 verbose read json /usr/local/lib/node_modules/bower/node_modules/unzip/package.json
+128 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/package.json
+129 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/package.json
+130 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/package.json
+131 verbose read json /usr/local/lib/node_modules/yo/node_modules/colors/package.json
+132 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/package.json
+133 verbose read json /usr/local/lib/node_modules/yo/node_modules/lodash/package.json
+134 verbose read json /usr/local/lib/node_modules/yo/node_modules/nopt/package.json
+135 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/package.json
+136 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/package.json
+137 verbose read json /usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/package.json
+138 verbose read json /usr/local/lib/node_modules/grunt-cli/node_modules/nopt/package.json
+139 verbose read json /usr/local/lib/node_modules/grunt-cli/node_modules/resolve/package.json
+140 verbose read json /usr/local/lib/node_modules/npm/node_modules/abbrev/package.json
+141 verbose read json /usr/local/lib/node_modules/npm/node_modules/ansi/package.json
+142 verbose read json /usr/local/lib/node_modules/npm/node_modules/archy/package.json
+143 verbose read json /usr/local/lib/node_modules/npm/node_modules/block-stream/package.json
+144 verbose read json /usr/local/lib/node_modules/npm/node_modules/child-process-close/package.json
+145 verbose read json /usr/local/lib/node_modules/npm/node_modules/chmodr/package.json
+146 verbose read json /usr/local/lib/node_modules/npm/node_modules/chownr/package.json
+147 verbose read json /usr/local/lib/node_modules/npm/node_modules/cmd-shim/package.json
+148 verbose read json /usr/local/lib/node_modules/npm/node_modules/editor/package.json
+149 verbose read json /usr/local/lib/node_modules/npm/node_modules/fstream/package.json
+150 verbose read json /usr/local/lib/node_modules/npm/node_modules/fstream-npm/package.json
+151 verbose read json /usr/local/lib/node_modules/npm/node_modules/glob/package.json
+152 verbose read json /usr/local/lib/node_modules/npm/node_modules/graceful-fs/package.json
+153 verbose read json /usr/local/lib/node_modules/npm/node_modules/inherits/package.json
+154 verbose read json /usr/local/lib/node_modules/npm/node_modules/ini/package.json
+155 verbose read json /usr/local/lib/node_modules/npm/node_modules/init-package-json/package.json
+156 verbose read json /usr/local/lib/node_modules/npm/node_modules/lockfile/package.json
+157 verbose read json /usr/local/lib/node_modules/npm/node_modules/lru-cache/package.json
+158 verbose read json /usr/local/lib/node_modules/npm/node_modules/minimatch/package.json
+159 verbose read json /usr/local/lib/node_modules/npm/node_modules/mkdirp/package.json
+160 verbose read json /usr/local/lib/node_modules/npm/node_modules/node-gyp/package.json
+161 verbose read json /usr/local/lib/node_modules/npm/node_modules/nopt/package.json
+162 verbose read json /usr/local/lib/node_modules/npm/node_modules/npm-registry-client/package.json
+163 verbose read json /usr/local/lib/node_modules/npm/node_modules/npm-user-validate/package.json
+164 verbose read json /usr/local/lib/node_modules/npm/node_modules/npmconf/package.json
+165 verbose read json /usr/local/lib/node_modules/npm/node_modules/npmlog/package.json
+166 verbose read json /usr/local/lib/node_modules/npm/node_modules/once/package.json
+167 verbose read json /usr/local/lib/node_modules/npm/node_modules/opener/package.json
+168 verbose read json /usr/local/lib/node_modules/npm/node_modules/osenv/package.json
+169 verbose read json /usr/local/lib/node_modules/npm/node_modules/read/package.json
+170 verbose read json /usr/local/lib/node_modules/npm/node_modules/read-installed/package.json
+171 verbose read json /usr/local/lib/node_modules/npm/node_modules/read-package-json/package.json
+172 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/package.json
+173 verbose read json /usr/local/lib/node_modules/npm/node_modules/retry/package.json
+174 verbose read json /usr/local/lib/node_modules/npm/node_modules/rimraf/package.json
+175 verbose read json /usr/local/lib/node_modules/npm/node_modules/semver/package.json
+176 verbose read json /usr/local/lib/node_modules/npm/node_modules/sha/package.json
+177 verbose read json /usr/local/lib/node_modules/npm/node_modules/slide/package.json
+178 verbose read json /usr/local/lib/node_modules/npm/node_modules/tar/package.json
+179 verbose read json /usr/local/lib/node_modules/npm/node_modules/uid-number/package.json
+180 verbose read json /usr/local/lib/node_modules/npm/node_modules/which/package.json
+181 verbose read json /usr/local/lib/node_modules/bower/node_modules/fstream/node_modules/graceful-fs/package.json
+182 verbose read json /usr/local/lib/node_modules/bower/node_modules/fstream/node_modules/inherits/package.json
+183 verbose read json /usr/local/lib/node_modules/bower/node_modules/glob/node_modules/graceful-fs/package.json
+184 verbose read json /usr/local/lib/node_modules/bower/node_modules/glob/node_modules/inherits/package.json
+185 verbose read json /usr/local/lib/node_modules/bower/node_modules/glob/node_modules/minimatch/package.json
+186 verbose read json /usr/local/lib/node_modules/bower/node_modules/promptly/node_modules/read/package.json
+187 verbose read json /usr/local/lib/node_modules/bower/node_modules/rc/node_modules/config-chain/package.json
+188 verbose read json /usr/local/lib/node_modules/bower/node_modules/rc/node_modules/optimist/package.json
+189 verbose read json /usr/local/lib/node_modules/bower/node_modules/read-package-json/node_modules/graceful-fs/package.json
+190 verbose read json /usr/local/lib/node_modules/bower/node_modules/read-package-json/node_modules/lru-cache/package.json
+191 verbose read json /usr/local/lib/node_modules/bower/node_modules/read-package-json/node_modules/npmlog/package.json
+192 verbose read json /usr/local/lib/node_modules/bower/node_modules/read-package-json/node_modules/slide/package.json
+193 verbose read json /usr/local/lib/node_modules/bower/node_modules/request/node_modules/form-data/package.json
+194 verbose read json /usr/local/lib/node_modules/bower/node_modules/request/node_modules/mime/package.json
+195 verbose read json /usr/local/lib/node_modules/bower/node_modules/rimraf/node_modules/graceful-fs/package.json
+196 verbose read json /usr/local/lib/node_modules/bower/node_modules/tar/node_modules/block-stream/package.json
+197 verbose read json /usr/local/lib/node_modules/bower/node_modules/tar/node_modules/inherits/package.json
+198 verbose read json /usr/local/lib/node_modules/bower/node_modules/unzip/node_modules/binary/package.json
+199 verbose read json /usr/local/lib/node_modules/bower/node_modules/unzip/node_modules/match-stream/package.json
+200 verbose read json /usr/local/lib/node_modules/bower/node_modules/unzip/node_modules/pullstream/package.json
+201 verbose read json /usr/local/lib/node_modules/bower/node_modules/unzip/node_modules/readable-stream/package.json
+202 verbose read json /usr/local/lib/node_modules/bower/node_modules/unzip/node_modules/setimmediate/package.json
+203 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/node_modules/configstore/package.json
+204 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/node_modules/request/package.json
+205 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/cheerio/package.json
+206 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/cli-table/package.json
+207 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/debug/package.json
+208 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/diff/package.json
+209 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/glob/package.json
+210 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/isbinaryfile/package.json
+211 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/lodash/package.json
+212 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/mime/package.json
+213 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/mkdirp/package.json
+214 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/nopt/package.json
+215 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/read/package.json
+216 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/package.json
+217 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/rimraf/package.json
+218 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/tar/package.json
+219 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/underscore.string/package.json
+220 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/cheerio/package.json
+221 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/cli-table/package.json
+222 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/debug/package.json
+223 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/diff/package.json
+224 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/glob/package.json
+225 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/isbinaryfile/package.json
+226 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/lodash/package.json
+227 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/mime/package.json
+228 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/mkdirp/package.json
+229 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/nopt/package.json
+230 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/read/package.json
+231 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/package.json
+232 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/rimraf/package.json
+233 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/tar/package.json
+234 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/underscore.string/package.json
+235 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/async/package.json
+236 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/package.json
+237 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/lodash/package.json
+238 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/package.json
+239 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/request/package.json
+240 verbose read json /usr/local/lib/node_modules/yo/node_modules/nopt/node_modules/abbrev/package.json
+241 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/package.json
+242 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/request/package.json
+243 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/semver/package.json
+244 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/cheerio/package.json
+245 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/cli-table/package.json
+246 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/dargs/package.json
+247 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/debug/package.json
+248 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/diff/package.json
+249 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/glob/package.json
+250 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/isbinaryfile/package.json
+251 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/mime/package.json
+252 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/mkdirp/package.json
+253 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/package.json
+254 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/package.json
+255 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/revalidator/package.json
+256 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/rimraf/package.json
+257 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/tar/package.json
+258 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/underscore.string/package.json
+259 verbose read json /usr/local/lib/node_modules/testacular/node_modules/chokidar/package.json
+260 verbose read json /usr/local/lib/node_modules/testacular/node_modules/glob/package.json
+261 verbose read json /usr/local/lib/node_modules/testacular/node_modules/minimatch/package.json
+262 verbose read json /usr/local/lib/node_modules/testacular/node_modules/optimist/package.json
+263 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/package.json
+264 verbose read json /usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules/glob/package.json
+265 verbose read json /usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules/lodash/package.json
+266 verbose read json /usr/local/lib/node_modules/grunt-cli/node_modules/nopt/node_modules/abbrev/package.json
+267 verbose read json /usr/local/lib/node_modules/npm/node_modules/fstream-npm/node_modules/fstream-ignore/package.json
+268 verbose read json /usr/local/lib/node_modules/npm/node_modules/init-package-json/node_modules/promzard/package.json
+269 verbose read json /usr/local/lib/node_modules/npm/node_modules/minimatch/node_modules/sigmund/package.json
+270 verbose read json /usr/local/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/couch-login/package.json
+271 verbose read json /usr/local/lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/package.json
+272 verbose read json /usr/local/lib/node_modules/npm/node_modules/read/node_modules/mute-stream/package.json
+273 verbose read json /usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/package.json
+274 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/aws-sign/package.json
+275 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/cookie-jar/package.json
+276 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/forever-agent/package.json
+277 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/form-data/package.json
+278 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/hawk/package.json
+279 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/http-signature/package.json
+280 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/json-stringify-safe/package.json
+281 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/mime/package.json
+282 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/node-uuid/package.json
+283 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/oauth-sign/package.json
+284 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/qs/package.json
+285 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/package.json
+286 warn package.json cli-table@0.2.0 No repository field.
+287 verbose read json /usr/local/lib/node_modules/bower/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json
+288 verbose read json /usr/local/lib/node_modules/bower/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json
+289 verbose read json /usr/local/lib/node_modules/bower/node_modules/promptly/node_modules/read/node_modules/mute-stream/package.json
+290 verbose read json /usr/local/lib/node_modules/bower/node_modules/rc/node_modules/config-chain/node_modules/ini/package.json
+291 verbose read json /usr/local/lib/node_modules/bower/node_modules/rc/node_modules/config-chain/node_modules/proto-list/package.json
+292 verbose read json /usr/local/lib/node_modules/bower/node_modules/rc/node_modules/optimist/node_modules/wordwrap/package.json
+293 verbose read json /usr/local/lib/node_modules/bower/node_modules/read-package-json/node_modules/npmlog/node_modules/ansi/package.json
+294 verbose read json /usr/local/lib/node_modules/bower/node_modules/unzip/node_modules/binary/node_modules/buffers/package.json
+295 verbose read json /usr/local/lib/node_modules/bower/node_modules/unzip/node_modules/binary/node_modules/chainsaw/package.json
+296 verbose read json /usr/local/lib/node_modules/bower/node_modules/unzip/node_modules/match-stream/node_modules/buffers/package.json
+297 verbose read json /usr/local/lib/node_modules/bower/node_modules/unzip/node_modules/pullstream/node_modules/over/package.json
+298 verbose read json /usr/local/lib/node_modules/bower/node_modules/unzip/node_modules/pullstream/node_modules/slice-stream/package.json
+299 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/node_modules/configstore/node_modules/lodash/package.json
+300 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/package.json
+301 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/node_modules/request/node_modules/form-data/package.json
+302 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/node_modules/request/node_modules/mime/package.json
+303 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/cheerio/node_modules/cheerio-select/package.json
+304 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/cheerio/node_modules/entities/package.json
+305 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/cheerio/node_modules/htmlparser2/package.json
+306 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/cheerio/node_modules/underscore/package.json
+307 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/cli-table/node_modules/colors/package.json
+308 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/glob/node_modules/graceful-fs/package.json
+309 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/glob/node_modules/inherits/package.json
+310 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/glob/node_modules/minimatch/package.json
+311 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/nopt/node_modules/abbrev/package.json
+312 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/read/node_modules/mute-stream/package.json
+313 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/aws-sign/package.json
+314 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/cookie-jar/package.json
+315 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/forever-agent/package.json
+316 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/form-data/package.json
+317 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/package.json
+318 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/json-stringify-safe/package.json
+319 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/node-uuid/package.json
+320 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/oauth-sign/package.json
+321 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/qs/package.json
+322 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/tunnel-agent/package.json
+323 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/rimraf/node_modules/graceful-fs/package.json
+324 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/tar/node_modules/block-stream/package.json
+325 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/tar/node_modules/fstream/package.json
+326 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/tar/node_modules/inherits/package.json
+327 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/cheerio/node_modules/cheerio-select/package.json
+328 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/cheerio/node_modules/entities/package.json
+329 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/cheerio/node_modules/htmlparser2/package.json
+330 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/cheerio/node_modules/underscore/package.json
+331 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/cli-table/node_modules/colors/package.json
+332 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/glob/node_modules/graceful-fs/package.json
+333 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/glob/node_modules/inherits/package.json
+334 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/glob/node_modules/minimatch/package.json
+335 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/nopt/node_modules/abbrev/package.json
+336 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/read/node_modules/mute-stream/package.json
+337 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/aws-sign/package.json
+338 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/cookie-jar/package.json
+339 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/forever-agent/package.json
+340 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/form-data/package.json
+341 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/package.json
+342 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/json-stringify-safe/package.json
+343 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/node-uuid/package.json
+344 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/oauth-sign/package.json
+345 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/qs/package.json
+346 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/tunnel-agent/package.json
+347 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/tar/node_modules/block-stream/package.json
+348 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/tar/node_modules/fstream/package.json
+349 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/tar/node_modules/inherits/package.json
+350 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/rimraf/node_modules/graceful-fs/package.json
+351 verbose read json /usr/local/lib/node_modules/bower/node_modules/request/node_modules/form-data/node_modules/async/package.json
+352 verbose read json /usr/local/lib/node_modules/bower/node_modules/request/node_modules/form-data/node_modules/combined-stream/package.json
+353 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/node_modules/lodash/package.json
+354 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/node_modules/mkdirp/package.json
+355 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/node_modules/yamljs/package.json
+356 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/pkginfo/package.json
+357 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/read/package.json
+358 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/revalidator/package.json
+359 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/utile/package.json
+360 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/winston/package.json
+361 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/request/node_modules/form-data/package.json
+362 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/request/node_modules/mime/package.json
+363 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/node_modules/lodash/package.json
+364 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/node_modules/mkdirp/package.json
+365 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/package.json
+366 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/request/node_modules/form-data/package.json
+367 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/request/node_modules/mime/package.json
+368 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/cheerio/node_modules/cheerio-select/package.json
+369 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/cheerio/node_modules/entities/package.json
+370 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/cheerio/node_modules/htmlparser2/package.json
+371 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/cheerio/node_modules/underscore/package.json
+372 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/cli-table/node_modules/colors/package.json
+373 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/glob/node_modules/graceful-fs/package.json
+374 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/glob/node_modules/inherits/package.json
+375 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/glob/node_modules/minimatch/package.json
+376 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/pkginfo/package.json
+377 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/read/package.json
+378 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/utile/package.json
+379 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/winston/package.json
+380 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/aws-sign/package.json
+381 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/cookie-jar/package.json
+382 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/forever-agent/package.json
+383 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/form-data/package.json
+384 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/package.json
+385 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/json-stringify-safe/package.json
+386 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/node-uuid/package.json
+387 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/oauth-sign/package.json
+388 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/qs/package.json
+389 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/tunnel-agent/package.json
+390 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/rimraf/node_modules/graceful-fs/package.json
+391 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/tar/node_modules/block-stream/package.json
+392 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/tar/node_modules/fstream/package.json
+393 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/tar/node_modules/inherits/package.json
+394 verbose read json /usr/local/lib/node_modules/testacular/node_modules/glob/node_modules/graceful-fs/package.json
+395 verbose read json /usr/local/lib/node_modules/testacular/node_modules/glob/node_modules/inherits/package.json
+396 verbose read json /usr/local/lib/node_modules/testacular/node_modules/glob/node_modules/minimatch/package.json
+397 verbose read json /usr/local/lib/node_modules/testacular/node_modules/minimatch/node_modules/lru-cache/package.json
+398 verbose read json /usr/local/lib/node_modules/testacular/node_modules/minimatch/node_modules/sigmund/package.json
+399 verbose read json /usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules/glob/node_modules/graceful-fs/package.json
+400 verbose read json /usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules/glob/node_modules/inherits/package.json
+401 verbose read json /usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/package.json
+402 verbose read json /usr/local/lib/node_modules/testacular/node_modules/optimist/node_modules/wordwrap/package.json
+403 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/node_modules/base64id/package.json
+404 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/node_modules/policyfile/package.json
+405 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/node_modules/redis/package.json
+406 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/node_modules/socket.io-client/package.json
+407 verbose read json /usr/local/lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/node_modules/proto-list/package.json
+408 verbose read json /usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/node_modules/github-url-from-git/package.json
+409 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/package.json
+410 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/combined-stream/package.json
+411 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/asn1/package.json
+412 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/assert-plus/package.json
+413 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/ctype/package.json
+414 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/package.json
+415 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json
+416 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/hoek/package.json
+417 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/package.json
+418 warn package.json cheerio-select@0.0.3 No repository field.
+419 warn package.json github-url-from-git@1.1.1 No repository field.
+420 warn package.json assert-plus@0.1.2 No repository field.
+421 warn package.json ctype@0.5.2 No repository field.
+422 verbose read json /usr/local/lib/node_modules/bower/node_modules/unzip/node_modules/binary/node_modules/chainsaw/node_modules/traverse/package.json
+423 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/node_modules/argparse/package.json
+424 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/node_modules/request/node_modules/form-data/node_modules/async/package.json
+425 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/node_modules/request/node_modules/form-data/node_modules/combined-stream/package.json
+426 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/cheerio/node_modules/cheerio-select/node_modules/CSSselect/package.json
+427 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/cheerio/node_modules/htmlparser2/node_modules/domelementtype/package.json
+428 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/cheerio/node_modules/htmlparser2/node_modules/domhandler/package.json
+429 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/cheerio/node_modules/htmlparser2/node_modules/domutils/package.json
+430 verbose read json /usr/local/lib/node_modules/testacular/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json
+431 verbose read json /usr/local/lib/node_modules/testacular/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json
+432 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json
+433 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json
+434 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/form-data/node_modules/async/package.json
+435 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/form-data/node_modules/combined-stream/package.json
+436 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/node_modules/boom/package.json
+437 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json
+438 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/node_modules/hoek/package.json
+439 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/node_modules/sntp/package.json
+440 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/tar/node_modules/fstream/node_modules/graceful-fs/package.json
+441 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/cheerio/node_modules/cheerio-select/node_modules/CSSselect/package.json
+442 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/cheerio/node_modules/htmlparser2/node_modules/domelementtype/package.json
+443 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/cheerio/node_modules/htmlparser2/node_modules/domhandler/package.json
+444 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/cheerio/node_modules/htmlparser2/node_modules/domutils/package.json
+445 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json
+446 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json
+447 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/form-data/node_modules/async/package.json
+448 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/form-data/node_modules/combined-stream/package.json
+449 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/node_modules/boom/package.json
+450 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json
+451 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/node_modules/hoek/package.json
+452 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/node_modules/sntp/package.json
+453 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/tar/node_modules/fstream/node_modules/graceful-fs/package.json
+454 verbose read json /usr/local/lib/node_modules/bower/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json
+455 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/node_modules/yamljs/node_modules/argparse/package.json
+456 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/node_modules/yamljs/node_modules/glob/package.json
+457 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/read/node_modules/mute-stream/package.json
+458 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/utile/node_modules/deep-equal/package.json
+459 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/utile/node_modules/i/package.json
+460 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/utile/node_modules/mkdirp/package.json
+461 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/utile/node_modules/ncp/package.json
+462 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/utile/node_modules/rimraf/package.json
+463 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/winston/node_modules/cycle/package.json
+464 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/winston/node_modules/eyes/package.json
+465 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/winston/node_modules/pkginfo/package.json
+466 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/winston/node_modules/request/package.json
+467 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/prompt/node_modules/winston/node_modules/stack-trace/package.json
+468 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/request/node_modules/form-data/node_modules/async/package.json
+469 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/request/node_modules/form-data/node_modules/combined-stream/package.json
+470 warn package.json policyfile@0.0.4 No repository field.
+471 warn package.json policyfile@0.0.4 'repositories' (plural) Not supported.
+471 warn package.json Please pick one as the 'repository' field
+472 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/node_modules/argparse/package.json
+473 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/node_modules/glob/package.json
+474 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/request/node_modules/form-data/node_modules/async/package.json
+475 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/request/node_modules/form-data/node_modules/combined-stream/package.json
+476 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/cheerio/node_modules/cheerio-select/node_modules/CSSselect/package.json
+477 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/cheerio/node_modules/htmlparser2/node_modules/domelementtype/package.json
+478 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/cheerio/node_modules/htmlparser2/node_modules/domhandler/package.json
+479 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/cheerio/node_modules/htmlparser2/node_modules/domutils/package.json
+480 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json
+481 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json
+482 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/read/node_modules/mute-stream/package.json
+483 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/utile/node_modules/async/package.json
+484 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/utile/node_modules/deep-equal/package.json
+485 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/utile/node_modules/i/package.json
+486 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/utile/node_modules/ncp/package.json
+487 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/utile/node_modules/rimraf/package.json
+488 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/winston/node_modules/async/package.json
+489 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/winston/node_modules/cycle/package.json
+490 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/winston/node_modules/eyes/package.json
+491 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/winston/node_modules/pkginfo/package.json
+492 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/winston/node_modules/request/package.json
+493 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/prompt/node_modules/winston/node_modules/stack-trace/package.json
+494 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/form-data/node_modules/async/package.json
+495 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/form-data/node_modules/combined-stream/package.json
+496 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/node_modules/boom/package.json
+497 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json
+498 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/node_modules/hoek/package.json
+499 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/hawk/node_modules/sntp/package.json
+500 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/tar/node_modules/fstream/node_modules/graceful-fs/package.json
+501 verbose read json /usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json
+502 verbose read json /usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json
+503 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/node_modules/socket.io-client/node_modules/active-x-obfuscator/package.json
+504 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/package.json
+505 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/package.json
+506 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/node_modules/socket.io-client/node_modules/xmlhttprequest/package.json
+507 verbose read json /usr/local/lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json
+508 warn package.json eyes@0.1.8 No repository field.
+509 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/node_modules/argparse/node_modules/underscore/package.json
+510 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/node_modules/argparse/node_modules/underscore.string/package.json
+511 verbose read json /usr/local/lib/node_modules/bower/node_modules/update-notifier/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json
+512 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/cheerio/node_modules/cheerio-select/node_modules/CSSselect/node_modules/CSSwhat/package.json
+513 verbose read json /usr/local/lib/node_modules/generator-angular/node_modules/yeoman-generator/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json
+514 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/cheerio/node_modules/cheerio-select/node_modules/CSSselect/node_modules/CSSwhat/package.json
+515 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/node_modules/socket.io-client/node_modules/active-x-obfuscator/node_modules/zeparser/package.json
+516 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/node_modules/commander/package.json
+517 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/node_modules/options/package.json
+518 verbose read json /usr/local/lib/node_modules/testacular/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/node_modules/tinycolor/package.json
+519 verbose read json /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json
+520 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/node_modules/yamljs/node_modules/argparse/node_modules/underscore/package.json
+521 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/node_modules/yamljs/node_modules/argparse/node_modules/underscore.string/package.json
+522 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/node_modules/yamljs/node_modules/glob/node_modules/graceful-fs/package.json
+523 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/node_modules/yamljs/node_modules/glob/node_modules/inherits/package.json
+524 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/node_modules/yamljs/node_modules/glob/node_modules/minimatch/package.json
+525 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json
+526 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/node_modules/argparse/node_modules/underscore/package.json
+527 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/node_modules/argparse/node_modules/underscore.string/package.json
+528 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/node_modules/glob/node_modules/graceful-fs/package.json
+529 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/node_modules/glob/node_modules/inherits/package.json
+530 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/node_modules/glob/node_modules/minimatch/package.json
+531 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json
+532 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/cheerio/node_modules/cheerio-select/node_modules/CSSselect/node_modules/CSSwhat/package.json
+533 verbose read json /usr/local/lib/node_modules/yo/node_modules/yeoman-generator/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json
+534 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/node_modules/yamljs/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json
+535 verbose read json /usr/local/lib/node_modules/yo/node_modules/insight/node_modules/configstore/node_modules/yamljs/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json
+536 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json
+537 verbose read json /usr/local/lib/node_modules/yo/node_modules/update-notifier/node_modules/configstore/node_modules/yamljs/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json
+538 verbose readInstalled returning bower@0.9.2
+539 verbose readInstalled returning coffee-script@1.6.2
+540 verbose readInstalled returning generator-angular@0.2.2
+541 verbose readInstalled returning generator-karma@0.3.0
+542 verbose readInstalled returning grunt-cli@0.1.8
+543 verbose readInstalled returning n@0.9.3
+544 verbose readInstalled returning npm@1.2.21
+545 verbose readInstalled returning testacular@0.0.17
+546 verbose readInstalled returning yo@1.0.0-beta.5
+547 verbose readInstalled returning abbrev@1.0.4
+548 verbose readInstalled returning archy@0.0.2
+549 verbose readInstalled returning async@0.2.8
+550 verbose readInstalled returning colors@0.6.0-1
+551 verbose readInstalled returning fstream@0.1.22
+552 verbose readInstalled returning glob@3.1.21
+553 verbose readInstalled returning hogan.js@2.0.0
+554 verbose readInstalled returning lodash@1.0.1
+555 verbose readInstalled returning mkdirp@0.3.5
+556 verbose readInstalled returning nopt@2.0.0
+557 verbose readInstalled returning promptly@0.1.0
+558 verbose readInstalled returning rc@0.0.8
+559 verbose readInstalled returning read-package-json@0.1.13
+560 verbose readInstalled returning request@2.11.4
+561 verbose readInstalled returning rimraf@2.0.3
+562 verbose readInstalled returning semver@1.1.4
+563 verbose readInstalled returning stable@0.1.3
+564 verbose readInstalled returning tar@0.1.17
+565 verbose readInstalled returning tmp@0.0.18
+566 verbose readInstalled returning unzip@0.1.7
+567 verbose readInstalled returning update-notifier@0.1.3
+568 verbose readInstalled returning graceful-fs@1.2.1
+569 verbose readInstalled returning inherits@1.0.0
+570 verbose readInstalled returning graceful-fs@1.1.14
+571 verbose readInstalled returning minimatch@0.2.12
+572 verbose readInstalled returning graceful-fs@1.2.1
+573 verbose readInstalled returning inherits@1.0.0
+574 verbose readInstalled returning lru-cache@2.3.0
+575 verbose readInstalled returning sigmund@1.0.0
+576 verbose readInstalled returning read@1.0.4
+577 verbose readInstalled returning mute-stream@0.0.3
+578 verbose readInstalled returning config-chain@0.3.4
+579 verbose readInstalled returning optimist@0.3.7
+580 verbose readInstalled returning proto-list@1.2.2
+581 verbose readInstalled returning ini@1.0.5
+582 verbose readInstalled returning wordwrap@0.0.2
+583 verbose readInstalled returning lru-cache@2.0.4
+584 verbose readInstalled returning slide@1.1.4
+585 verbose readInstalled returning npmlog@0.0.2
+586 verbose readInstalled returning graceful-fs@1.2.1
+587 verbose readInstalled returning ansi@0.1.2
+588 verbose readInstalled returning form-data@0.0.3
+589 verbose readInstalled returning mime@1.2.7
+590 verbose readInstalled returning combined-stream@0.0.3
+591 verbose readInstalled returning async@0.1.9
+592 verbose readInstalled returning delayed-stream@0.0.5
+593 verbose readInstalled returning inherits@1.0.0
+594 verbose readInstalled returning block-stream@0.0.6
+595 verbose readInstalled returning pullstream@0.4.0
+596 verbose readInstalled returning binary@0.3.0
+597 verbose readInstalled returning readable-stream@1.0.2
+598 verbose readInstalled returning setimmediate@1.0.1
+599 verbose readInstalled returning match-stream@0.0.1
+600 verbose readInstalled returning over@0.0.5
+601 verbose readInstalled returning slice-stream@0.0.0
+602 verbose readInstalled returning chainsaw@0.1.0
+603 verbose readInstalled returning buffers@0.1.1
+604 verbose readInstalled returning traverse@0.3.9
+605 verbose readInstalled returning buffers@0.1.1
+606 verbose readInstalled returning request@2.12.0
+607 verbose readInstalled returning configstore@0.1.2
+608 verbose readInstalled returning form-data@0.0.3
+609 verbose readInstalled returning mime@1.2.7
+610 verbose readInstalled returning combined-stream@0.0.3
+611 verbose readInstalled returning async@0.1.9
+612 verbose readInstalled returning delayed-stream@0.0.5
+613 verbose readInstalled returning lodash@1.2.1
+614 verbose readInstalled returning yamljs@0.1.4
+615 verbose readInstalled returning argparse@0.1.15
+616 verbose readInstalled returning underscore@1.4.4
+617 verbose readInstalled returning underscore.string@2.3.1
+618 verbose readInstalled returning yeoman-generator@0.10.5
+619 verbose readInstalled returning cheerio@0.10.8
+620 verbose readInstalled returning request@2.16.6
+621 verbose readInstalled returning rimraf@2.1.4
+622 verbose readInstalled returning tar@0.1.17
+623 verbose readInstalled returning diff@1.0.4
+624 verbose readInstalled returning mime@1.2.9
+625 verbose readInstalled returning underscore.string@2.3.1
+626 verbose readInstalled returning lodash@1.1.1
+627 verbose readInstalled returning mkdirp@0.3.5
+628 verbose readInstalled returning read@1.0.4
+629 verbose readInstalled returning glob@3.1.21
+630 verbose readInstalled returning nopt@2.1.1
+631 verbose readInstalled returning cli-table@0.2.0
+632 verbose readInstalled returning debug@0.7.2
+633 verbose readInstalled returning isbinaryfile@0.1.8
+634 verbose readInstalled returning cheerio-select@0.0.3
+635 verbose readInstalled returning htmlparser2@2.6.0
+636 verbose readInstalled returning underscore@1.4.4
+637 verbose readInstalled returning entities@0.3.0
+638 verbose readInstalled returning CSSselect@0.3.1
+639 verbose readInstalled returning CSSwhat@0.2.0
+640 verbose readInstalled returning domhandler@2.0.3
+641 verbose readInstalled returning domutils@1.0.1
+642 verbose readInstalled returning domelementtype@1.1.1
+643 verbose readInstalled returning form-data@0.0.10
+644 verbose readInstalled returning hawk@0.10.2
+645 verbose readInstalled returning node-uuid@1.4.0
+646 verbose readInstalled returning cookie-jar@0.2.0
+647 verbose readInstalled returning aws-sign@0.2.0
+648 verbose readInstalled returning oauth-sign@0.2.0
+649 verbose readInstalled returning forever-agent@0.2.0
+650 verbose readInstalled returning tunnel-agent@0.2.0
+651 verbose readInstalled returning json-stringify-safe@3.0.0
+652 verbose readInstalled returning qs@0.5.6
+653 verbose readInstalled returning combined-stream@0.0.4
+654 verbose readInstalled returning async@0.2.8
+655 verbose readInstalled returning delayed-stream@0.0.5
+656 verbose readInstalled returning hoek@0.7.6
+657 verbose readInstalled returning boom@0.3.8
+658 verbose readInstalled returning cryptiles@0.1.3
+659 verbose readInstalled returning sntp@0.1.4
+660 verbose readInstalled returning graceful-fs@1.2.1
+661 verbose readInstalled returning inherits@1.0.0
+662 verbose readInstalled returning block-stream@0.0.6
+663 verbose readInstalled returning fstream@0.1.22
+664 verbose readInstalled returning graceful-fs@1.2.1
+665 verbose readInstalled returning mute-stream@0.0.3
+666 verbose readInstalled returning minimatch@0.2.12
+667 verbose readInstalled returning graceful-fs@1.2.1
+668 verbose readInstalled returning inherits@1.0.0
+669 verbose readInstalled returning lru-cache@2.3.0
+670 verbose readInstalled returning sigmund@1.0.0
+671 verbose readInstalled returning abbrev@1.0.4
+672 verbose readInstalled returning colors@0.3.0
+673 verbose readInstalled returning yeoman-generator@0.10.5
+674 verbose readInstalled returning cheerio@0.10.8
+675 verbose readInstalled returning request@2.16.6
+676 verbose readInstalled returning rimraf@2.1.4
+677 verbose readInstalled returning tar@0.1.17
+678 verbose readInstalled returning diff@1.0.4
+679 verbose readInstalled returning mime@1.2.9
+680 verbose readInstalled returning underscore.string@2.3.1
+681 verbose readInstalled returning lodash@1.1.1
+682 verbose readInstalled returning mkdirp@0.3.5
+683 verbose readInstalled returning read@1.0.4
+684 verbose readInstalled returning glob@3.1.21
+685 verbose readInstalled returning nopt@2.1.1
+686 verbose readInstalled returning cli-table@0.2.0
+687 verbose readInstalled returning debug@0.7.2
+688 verbose readInstalled returning isbinaryfile@0.1.8
+689 verbose readInstalled returning cheerio-select@0.0.3
+690 verbose readInstalled returning htmlparser2@2.6.0
+691 verbose readInstalled returning underscore@1.4.4
+692 verbose readInstalled returning entities@0.3.0
+693 verbose readInstalled returning CSSselect@0.3.1
+694 verbose readInstalled returning CSSwhat@0.2.0
+695 verbose readInstalled returning domhandler@2.0.3
+696 verbose readInstalled returning domutils@1.0.1
+697 verbose readInstalled returning domelementtype@1.1.1
+698 verbose readInstalled returning form-data@0.0.10
+699 verbose readInstalled returning hawk@0.10.2
+700 verbose readInstalled returning node-uuid@1.4.0
+701 verbose readInstalled returning cookie-jar@0.2.0
+702 verbose readInstalled returning aws-sign@0.2.0
+703 verbose readInstalled returning oauth-sign@0.2.0
+704 verbose readInstalled returning forever-agent@0.2.0
+705 verbose readInstalled returning tunnel-agent@0.2.0
+706 verbose readInstalled returning json-stringify-safe@3.0.0
+707 verbose readInstalled returning qs@0.5.6
+708 verbose readInstalled returning combined-stream@0.0.4
+709 verbose readInstalled returning async@0.2.8
+710 verbose readInstalled returning delayed-stream@0.0.5
+711 verbose readInstalled returning hoek@0.7.6
+712 verbose readInstalled returning boom@0.3.8
+713 verbose readInstalled returning cryptiles@0.1.3
+714 verbose readInstalled returning sntp@0.1.4
+715 verbose readInstalled returning graceful-fs@1.2.1
+716 verbose readInstalled returning inherits@1.0.0
+717 verbose readInstalled returning block-stream@0.0.6
+718 verbose readInstalled returning fstream@0.1.22
+719 verbose readInstalled returning graceful-fs@1.2.1
+720 verbose readInstalled returning mute-stream@0.0.3
+721 verbose readInstalled returning minimatch@0.2.12
+722 verbose readInstalled returning graceful-fs@1.2.1
+723 verbose readInstalled returning inherits@1.0.0
+724 verbose readInstalled returning lru-cache@2.3.0
+725 verbose readInstalled returning sigmund@1.0.0
+726 verbose readInstalled returning abbrev@1.0.4
+727 verbose readInstalled returning colors@0.3.0
+728 verbose readInstalled returning nopt@1.0.10
+729 verbose readInstalled returning findup-sync@0.1.2
+730 verbose readInstalled returning resolve@0.3.1
+731 verbose readInstalled returning abbrev@1.0.4
+732 verbose readInstalled returning glob@3.1.21
+733 verbose readInstalled returning lodash@1.0.1
+734 verbose readInstalled returning minimatch@0.2.12
+735 verbose readInstalled returning graceful-fs@1.2.1
+736 verbose readInstalled returning inherits@1.0.0
+737 verbose readInstalled returning lru-cache@2.3.0
+738 verbose readInstalled returning sigmund@1.0.0
+739 verbose readInstalled returning semver@1.1.4
+740 verbose readInstalled returning ini@1.1.0
+741 verbose readInstalled returning slide@1.1.4
+742 verbose readInstalled returning abbrev@1.0.4
+743 verbose readInstalled returning graceful-fs@1.2.1
+744 verbose readInstalled returning minimatch@0.2.12
+745 verbose readInstalled returning nopt@2.1.1
+746 verbose readInstalled returning rimraf@2.1.4
+747 verbose readInstalled returning request@2.21.0
+748 verbose readInstalled returning which@1.0.5
+749 verbose readInstalled returning tar@0.1.17
+750 verbose readInstalled returning fstream@0.1.22
+751 verbose readInstalled returning block-stream@0.0.6
+752 verbose readInstalled returning inherits@1.0.0
+753 verbose readInstalled returning mkdirp@0.3.5
+754 verbose readInstalled returning read@1.0.4
+755 verbose readInstalled returning lru-cache@2.3.0
+756 verbose readInstalled returning node-gyp@0.9.5
+757 verbose readInstalled returning fstream-npm@0.1.4
+758 verbose readInstalled returning uid-number@0.0.3
+759 verbose readInstalled returning archy@0.0.2
+760 verbose readInstalled returning chownr@0.0.1
+761 verbose readInstalled returning npmlog@0.0.2
+762 verbose readInstalled returning ansi@0.1.2
+763 verbose readInstalled returning npm-registry-client@0.2.23
+764 verbose readInstalled returning read-package-json@0.4.1
+765 verbose readInstalled returning read-installed@0.1.1
+766 verbose readInstalled returning glob@3.2.1
+767 verbose readInstalled returning init-package-json@0.0.8
+768 verbose readInstalled returning osenv@0.0.3
+769 verbose readInstalled returning lockfile@0.3.2
+770 verbose readInstalled returning retry@0.6.0
+771 verbose readInstalled returning once@1.1.1
+772 verbose readInstalled returning npmconf@0.0.24
+773 verbose readInstalled returning opener@1.3.0
+774 verbose readInstalled returning chmodr@0.1.0
+775 verbose readInstalled returning cmd-shim@1.1.0
+776 verbose readInstalled returning sha@1.0.1
+777 verbose readInstalled returning editor@0.0.4
+778 verbose readInstalled returning child-process-close@0.1.1
+779 verbose readInstalled returning npm-user-validate@0.0.1
+780 verbose readInstalled returning sigmund@1.0.0
+781 verbose readInstalled returning qs@0.6.4
+782 verbose readInstalled returning json-stringify-safe@4.0.0
+783 verbose readInstalled returning forever-agent@0.5.0
+784 verbose readInstalled returning tunnel-agent@0.3.0
+785 verbose readInstalled returning http-signature@0.9.11
+786 verbose readInstalled returning hawk@0.13.1
+787 verbose readInstalled returning aws-sign@0.3.0
+788 verbose readInstalled returning oauth-sign@0.3.0
+789 verbose readInstalled returning cookie-jar@0.3.0
+790 verbose readInstalled returning node-uuid@1.4.0
+791 verbose readInstalled returning mime@1.2.9
+792 verbose readInstalled returning form-data@0.0.8
+793 verbose readInstalled returning assert-plus@0.1.2
+794 verbose readInstalled returning asn1@0.1.11
+795 verbose readInstalled returning ctype@0.5.2
+796 verbose readInstalled returning hoek@0.8.5
+797 verbose readInstalled returning boom@0.4.1
+798 verbose readInstalled returning cryptiles@0.2.1
+799 verbose readInstalled returning sntp@0.2.2
+800 verbose readInstalled returning combined-stream@0.0.4
+801 verbose readInstalled returning async@0.2.8
+802 verbose readInstalled returning delayed-stream@0.0.5
+803 verbose readInstalled returning mute-stream@0.0.3
+804 verbose readInstalled returning fstream-ignore@0.0.6
+805 verbose readInstalled returning couch-login@0.1.16
+806 verbose readInstalled returning normalize-package-data@0.1.6
+807 verbose readInstalled returning github-url-from-git@1.1.1
+808 verbose readInstalled returning promzard@0.2.0
+809 verbose readInstalled returning config-chain@1.1.7
+810 verbose readInstalled returning proto-list@1.2.2
+811 verbose readInstalled returning socket.io@0.9.14
+812 verbose readInstalled returning chokidar@0.6.2
+813 verbose readInstalled returning glob@3.2.1
+814 verbose readInstalled returning minimatch@0.2.12
+815 verbose readInstalled returning optimist@0.5.0
+816 verbose readInstalled returning socket.io-client@0.9.11
+817 verbose readInstalled returning policyfile@0.0.4
+818 verbose readInstalled returning base64id@0.1.0
+819 verbose readInstalled returning redis@0.7.3
+820 verbose readInstalled returning uglify-js@1.2.5
+821 verbose readInstalled returning ws@0.4.25
+822 verbose readInstalled returning xmlhttprequest@1.4.2
+823 verbose readInstalled returning active-x-obfuscator@0.0.1
+824 verbose readInstalled returning commander@0.6.1
+825 verbose readInstalled returning tinycolor@0.0.1
+826 verbose readInstalled returning options@0.0.5
+827 verbose readInstalled returning zeparser@0.0.5
+828 verbose readInstalled returning minimatch@0.2.12
+829 verbose readInstalled returning graceful-fs@1.2.1
+830 verbose readInstalled returning inherits@1.0.0
+831 verbose readInstalled returning lru-cache@2.3.0
+832 verbose readInstalled returning sigmund@1.0.0
+833 verbose readInstalled returning lru-cache@2.3.0
+834 verbose readInstalled returning sigmund@1.0.0
+835 verbose readInstalled returning wordwrap@0.0.2
+836 verbose readInstalled returning yeoman-generator@0.11.1
+837 verbose readInstalled returning colors@0.6.0-1
+838 verbose readInstalled returning nopt@2.1.1
+839 verbose readInstalled returning lodash@1.1.1
+840 verbose readInstalled returning update-notifier@0.1.3
+841 verbose readInstalled returning insight@0.1.0
+842 verbose readInstalled returning cheerio@0.10.8
+843 verbose readInstalled returning request@2.16.6
+844 verbose readInstalled returning rimraf@2.1.4
+845 verbose readInstalled returning tar@0.1.17
+846 verbose readInstalled returning diff@1.0.4
+847 verbose readInstalled returning mime@1.2.9
+848 verbose readInstalled returning underscore.string@2.3.1
+849 verbose readInstalled returning mkdirp@0.3.5
+850 verbose readInstalled returning glob@3.1.21
+851 verbose readInstalled returning cli-table@0.2.0
+852 verbose readInstalled returning debug@0.7.2
+853 verbose readInstalled returning isbinaryfile@0.1.8
+854 verbose readInstalled returning prompt@0.2.9
+855 verbose readInstalled returning revalidator@0.1.5
+856 verbose readInstalled returning dargs@0.1.0
+857 verbose readInstalled returning cheerio-select@0.0.3
+858 verbose readInstalled returning htmlparser2@2.6.0
+859 verbose readInstalled returning underscore@1.4.4
+860 verbose readInstalled returning entities@0.3.0
+861 verbose readInstalled returning CSSselect@0.3.1
+862 verbose readInstalled returning CSSwhat@0.2.0
+863 verbose readInstalled returning domhandler@2.0.3
+864 verbose readInstalled returning domutils@1.0.1
+865 verbose readInstalled returning domelementtype@1.1.1
+866 verbose readInstalled returning form-data@0.0.10
+867 verbose readInstalled returning hawk@0.10.2
+868 verbose readInstalled returning node-uuid@1.4.0
+869 verbose readInstalled returning cookie-jar@0.2.0
+870 verbose readInstalled returning aws-sign@0.2.0
+871 verbose readInstalled returning oauth-sign@0.2.0
+872 verbose readInstalled returning forever-agent@0.2.0
+873 verbose readInstalled returning tunnel-agent@0.2.0
+874 verbose readInstalled returning json-stringify-safe@3.0.0
+875 verbose readInstalled returning qs@0.5.6
+876 verbose readInstalled returning combined-stream@0.0.4
+877 verbose readInstalled returning async@0.2.8
+878 verbose readInstalled returning delayed-stream@0.0.5
+879 verbose readInstalled returning hoek@0.7.6
+880 verbose readInstalled returning boom@0.3.8
+881 verbose readInstalled returning cryptiles@0.1.3
+882 verbose readInstalled returning sntp@0.1.4
+883 verbose readInstalled returning graceful-fs@1.2.1
+884 verbose readInstalled returning inherits@1.0.0
+885 verbose readInstalled returning block-stream@0.0.6
+886 verbose readInstalled returning fstream@0.1.22
+887 verbose readInstalled returning graceful-fs@1.2.1
+888 verbose readInstalled returning minimatch@0.2.12
+889 verbose readInstalled returning graceful-fs@1.2.1
+890 verbose readInstalled returning inherits@1.0.0
+891 verbose readInstalled returning lru-cache@2.3.0
+892 verbose readInstalled returning sigmund@1.0.0
+893 verbose readInstalled returning abbrev@1.0.4
+894 verbose readInstalled returning colors@0.3.0
+895 verbose readInstalled returning pkginfo@0.3.0
+896 verbose readInstalled returning read@1.0.4
+897 verbose readInstalled returning utile@0.1.7
+898 verbose readInstalled returning winston@0.6.2
+899 verbose readInstalled returning mute-stream@0.0.3
+900 verbose readInstalled returning async@0.1.22
+901 verbose readInstalled returning deep-equal@0.0.0
+902 verbose readInstalled returning i@0.3.1
+903 verbose readInstalled returning ncp@0.2.7
+904 verbose readInstalled returning rimraf@1.0.9
+905 verbose readInstalled returning async@0.1.22
+906 verbose readInstalled returning cycle@1.0.2
+907 verbose readInstalled returning eyes@0.1.8
+908 verbose readInstalled returning pkginfo@0.2.3
+909 verbose readInstalled returning request@2.9.203
+910 verbose readInstalled returning stack-trace@0.0.6
+911 verbose readInstalled returning request@2.12.0
+912 verbose readInstalled returning configstore@0.1.2
+913 verbose readInstalled returning semver@1.1.4
+914 verbose readInstalled returning form-data@0.0.3
+915 verbose readInstalled returning mime@1.2.7
+916 verbose readInstalled returning combined-stream@0.0.3
+917 verbose readInstalled returning async@0.1.9
+918 verbose readInstalled returning delayed-stream@0.0.5
+919 verbose readInstalled returning lodash@1.2.1
+920 verbose readInstalled returning mkdirp@0.3.5
+921 verbose readInstalled returning yamljs@0.1.4
+922 verbose readInstalled returning argparse@0.1.15
+923 verbose readInstalled returning glob@3.1.21
+924 verbose readInstalled returning underscore@1.4.4
+925 verbose readInstalled returning underscore.string@2.3.1
+926 verbose readInstalled returning minimatch@0.2.12
+927 verbose readInstalled returning graceful-fs@1.2.1
+928 verbose readInstalled returning inherits@1.0.0
+929 verbose readInstalled returning lru-cache@2.3.0
+930 verbose readInstalled returning sigmund@1.0.0
+931 verbose readInstalled returning request@2.12.0
+932 verbose readInstalled returning configstore@0.1.2
+933 verbose readInstalled returning async@0.1.22
+934 verbose readInstalled returning lodash@1.0.1
+935 verbose readInstalled returning prompt@0.2.9
+936 verbose readInstalled returning form-data@0.0.3
+937 verbose readInstalled returning mime@1.2.7
+938 verbose readInstalled returning combined-stream@0.0.3
+939 verbose readInstalled returning async@0.1.9
+940 verbose readInstalled returning delayed-stream@0.0.5
+941 verbose readInstalled returning lodash@1.2.1
+942 verbose readInstalled returning mkdirp@0.3.5
+943 verbose readInstalled returning yamljs@0.1.4
+944 verbose readInstalled returning argparse@0.1.15
+945 verbose readInstalled returning glob@3.1.21
+946 verbose readInstalled returning underscore@1.4.4
+947 verbose readInstalled returning underscore.string@2.3.1
+948 verbose readInstalled returning minimatch@0.2.12
+949 verbose readInstalled returning graceful-fs@1.2.1
+950 verbose readInstalled returning inherits@1.0.0
+951 verbose readInstalled returning lru-cache@2.3.0
+952 verbose readInstalled returning sigmund@1.0.0
+953 verbose readInstalled returning pkginfo@0.3.0
+954 verbose readInstalled returning read@1.0.4
+955 verbose readInstalled returning revalidator@0.1.5
+956 verbose readInstalled returning utile@0.1.7
+957 verbose readInstalled returning winston@0.6.2
+958 verbose readInstalled returning mute-stream@0.0.3
+959 verbose readInstalled returning deep-equal@0.0.0
+960 verbose readInstalled returning i@0.3.1
+961 verbose readInstalled returning mkdirp@0.3.5
+962 verbose readInstalled returning ncp@0.2.7
+963 verbose readInstalled returning rimraf@1.0.9
+964 verbose readInstalled returning cycle@1.0.2
+965 verbose readInstalled returning eyes@0.1.8
+966 verbose readInstalled returning pkginfo@0.2.3
+967 verbose readInstalled returning request@2.9.203
+968 verbose readInstalled returning stack-trace@0.0.6
+969 verbose readInstalled returning undefined
+970 error peerinvalid The package generator-karma does not satisfy its siblings' peerDependencies requirements!
+970 error peerinvalid Peer generator-angular@0.2.2 wants generator-karma@~0.2.0
+971 error System Linux 3.2.0-40-generic-pae
+972 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "coffee-script"
+973 error cwd /var/www/restate/app
+974 error node -v v0.10.7
+975 error npm -v 1.2.21
+976 error code EPEERINVALID
+977 verbose exit [ 1, true ]
