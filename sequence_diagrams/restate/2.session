@@ -1,0 +1,11 @@
+window_sizes 1280 996 146 1128 833 89
+diagrams
+  active  sequencediagram_ref 128130 // getting properties
+    1108 796 138 4 2 0
+end
+show_stereotypes
+selected classinstance_ref 128258 // rental_unit_factory
+open
+  usecaseview_ref 128130 // get prperty
+end
+end

@@ -1,0 +1,110 @@
+format 74
+
+classinstancecanvas 128002 classinstance_ref 128130 // controller
+  xyz 24.8306 4.30634 2005 life_line_z 2000
+end
+classinstancecanvas 128258 classinstance_ref 128386 // rental_supplier
+  xyz 161.791 5.20672 2015 life_line_z 2000
+end
+classinstancecanvas 128386 classinstance_ref 128514 // repo
+  xyz 710.778 4.30634 2005 life_line_z 2000
+end
+classinstancecanvas 128642 classinstance_ref 128642 // rental_unit
+  xyz 517.707 152.502 2005 life_line_z 2000
+end
+classinstancecanvas 128770 classinstance_ref 128258 // rental_unit_factory
+  xyz 297.544 47.0224 2000 life_line_z 2000
+end
+fragment 130306 "loop"
+  form "eaoeu" xyzwh 164.791 181.182 2015 140 88
+end
+fragment 131074 "loop"
+  xyzwh 174 283 2015 161 72
+end
+durationcanvas 128898 classinstance_ref 128002 // controller:controller
+  xyzwh 77 65.6313 2010 11 336
+end
+durationcanvas 129026 classinstance_ref 128258 // rental_supplier:UnitSupplier
+  xyzwh 238 83.1631 2010 11 495
+end
+durationcanvas 129282 classinstance_ref 128770 // rental_unit_factory:UnitFactory
+  xyzwh 380 195.584 2010 11 60
+end
+durationcanvas 129666 classinstance_ref 128386 // repo:Repo
+  xyzwh 739 110.148 2010 11 39
+end
+durationcanvas 130562 classinstance_ref 128642 // rental_unit:RentalUnit
+  xyzwh 577 200.082 2010 11 41
+end
+durationcanvas 131202 classinstance_ref 128642 // rental_unit:RentalUnit
+  xyzwh 577 300 2010 11 38
+end
+msg 129154 synchronous
+  from durationcanvas_ref 128898
+  to durationcanvas_ref 129026
+  yz 83 2015 explicitmsg "get_json_units()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  args "criteria"
+  label_xy 122 68
+msg 129410 synchronous
+  from durationcanvas_ref 129026
+  to durationcanvas_ref 129282
+  yz 201 2015 explicitmsg "create(data)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 305 186
+msg 129794 synchronous
+  from durationcanvas_ref 129026
+  to durationcanvas_ref 129666
+  yz 112 2015 explicitmsg "get_units()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  args "search_params"
+  label_xy 588 99
+msg 130178 return
+  from durationcanvas_ref 129666
+  to durationcanvas_ref 129026
+  yz 138 2020 explicitmsg "units_data"
+  stereotype "<<Array>>" xyz 440 147 3000
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 441 126
+msg 130434 return
+  from durationcanvas_ref 129282
+  to durationcanvas_ref 129026
+  yz 234 2020 explicitmsg "unit"
+  stereotype "<<RentalUnit>>" xyz 273 244 3000
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 301 221
+msg 130690 synchronous
+  from durationcanvas_ref 129282
+  to durationcanvas_ref 130562
+  yz 208 2015 explicitmsg "create()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  args "data"
+  label_xy 437 192
+msg 130818 return
+  from durationcanvas_ref 130562
+  to durationcanvas_ref 129282
+  yz 226 2015 explicitmsg "unit"
+  stereotype "<<RentalUnit>>" xyz 433 233 3000
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 462 215
+msg 131330 synchronous
+  from durationcanvas_ref 129026
+  to durationcanvas_ref 131202
+  yz 298 2015 explicitmsg "to_json()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 471 286
+msg 131458 return
+  from durationcanvas_ref 131202
+  to durationcanvas_ref 129026
+  yz 321 2015 explicitmsg "unit"
+  stereotype "<<JSON>>" xyz 270 329 3000
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 285 310
+msg 131842 return
+  from durationcanvas_ref 129026
+  to durationcanvas_ref 128898
+  yz 386 2015 explicitmsg "units"
+  stereotype "<<array>>" xyz 135 396 3000
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 148 371
+end
