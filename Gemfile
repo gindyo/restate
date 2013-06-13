@@ -17,6 +17,7 @@ gem "guard-bundler", ">= 1.0.0", :group => :development
 gem "guard-rails", ">= 0.4.0", :group => :development
 gem "guard-rspec", ">= 2.5.2", :group => :development
 gem "guard-spork", :group => :development
+gem "guard-livereload", :group => :development
 gem "rb-inotify", ">= 0.9.0", :group => :development, :require => false
 gem "rb-fsevent", ">= 0.9.3", :group => :development, :require => false
 gem "rb-fchange", ">= 0.0.6", :group => :development, :require => false

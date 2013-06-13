@@ -15,12 +15,3 @@ class UnitSupplier
 
  
 end
-
-class Repo
-   def self.where search_params
-     data = [
-       {:id=>1, :price=>220},
-       {:id=>2, :price=>300}
-     ]
-   end
-end

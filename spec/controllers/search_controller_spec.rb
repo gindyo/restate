@@ -8,5 +8,10 @@ describe SearchController do
     query[:country].should eq('usa')
   end 
 
+  it "gets available places" do 
+    get('all_places')
+    response.should be_success
+    assigns(:places).count.should eq 2
+  end
 
 end

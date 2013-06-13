@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-
-//= require_tree ./restate/app
+//= require_tree ./restate/app/components/angular
+//= require_tree ./restate/app/scripts/modules
+//= require_tree ./restate/app/scripts/directives
+//= require_tree ./restate/app/scripts/controllers

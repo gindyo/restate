@@ -4,9 +4,13 @@ class SearchController < ActionController::Base
     @query[:state] = params[:state] if params[:state]
     @query[:city] = params[:city] if params[:city]
     @query[:country] = params[:country] if params[:country]
-    unit_factory = UnitFactory.new(RentalUnit)  
-    unit_supplier = UnitSupplier.new unit_factory
-    results = unit_supplier.get_json_units @query
+    repo = Repo.new 
+    results = repo.get_units @query
     render json: results.as_json
+  end
+  def all_places
+    @repo = Repo.new
+    @places = @repo.all_places 
+    render json: @places
   end
 end
