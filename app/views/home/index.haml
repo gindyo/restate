@@ -1,5 +1,8 @@
-#home_content{"ng-app" => "hp"}
-  .main{"ng-controller" => "main"}
-    %search_box
-    {{myVar}}
+
+#home_content{"ng-app" => "homePage"}
+  .main(ng-controller = "main")
+    %search_box( items = "places"
+                 width = '500px')
+
+
   #search_container
