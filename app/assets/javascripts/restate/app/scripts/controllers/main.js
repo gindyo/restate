@@ -5,13 +5,13 @@
     server.get_places = function() {
       return [
         {
-          city: 'ventnor',
+          city: 'Ventnor, NJ',
           url: 'Place/Ventnor'
         }, {
-          city: 'brigantine',
+          city: 'brigantine, CA',
           url: '/Place/Brigantine'
         }, {
-          city: 'margate',
+          city: 'margate CA',
           url: 'Place/Ventnor'
         }, {
           city: 'atlantic city',
