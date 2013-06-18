@@ -12,7 +12,9 @@ describe "search routes", :type=> :routing do
   it 'routes to geography country' do 
     get("geography/brigantine/nj/usa").should route_to("search#geography", country: 'usa', state: 'nj', city: 'brigantine')
   end
-  
+  it 'routes to places' do 
+    get("places/1234").should route_to("search#get_place", id: '1234')
+  end 
 end
 
 

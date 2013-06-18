@@ -7,7 +7,7 @@ angular.module('homePage')
     scope: {
       items: '='
       width: '@'
-      searchField: "@"
+      searchFields: "@"
 
     }
     template: '
@@ -19,11 +19,14 @@ angular.module('homePage')
           color: #696969
         }
         .search_box_links a{
+          text-align: left;
           display: block;
           width: 100%;
           
         }
         .search_box_links_containter {
+          left: 5px;
+          padding-bottom: 10px;
           background-color: white;
           position: absolute;
           overflow: hidden
@@ -33,10 +36,11 @@ angular.module('homePage')
           padding-left: 5px
         }
       </style>
-      <div>
-        <input type= "text" placeholder= "Search" ng-model = "search" style="width: {{width}}; margin-bottom: 0px; padding-left: 0px; padding-right: 0px">
+      <div style= "position: relative">
+        <input type= "text" placeholder= "Search" ng-model = "search" style="width: {{width}}; margin-bottom: 0px; padding-left: 5px; padding-right: 5px">
         <div ng-show="show_suggestions" class="search_box_links_containter">
           <div style="width: {{width}}" class ="search_box_links" ng-repeat = "item in items  | filter:search_filt" > 
+            
             <a class="search_box_link" href="{{item.url}}"> {{item.city}}</a> 
           </div>
         </div>
@@ -46,11 +50,13 @@ angular.module('homePage')
       attr.width = '200px' if !attr.width
       scope.show_suggestions = false
       scope.search_filt = (item)->
-        if scope.search && scope.search.length > 0
+        if scope.search && scope.search.length > 2
             regex = new RegExp(scope.search, 'i')
-            if item['city'].match(regex) != null
-              scope.show_suggestions = true
-              return true
+            console.log attr
+            for field in attr.searchFields.split ','
+              if item[field].match(regex) != null
+                scope.show_suggestions = true
+                return true
         else 
           scope.show_suggestions = false
           return false

@@ -9,9 +9,16 @@ describe SearchController do
   end 
 
   it "gets available places" do 
+    Repo.any_instance.should_receive(:all_places)
     get('all_places')
     response.should be_success
-    assigns(:places).count.should eq 2
   end
 
+  it "gets a place by id" do 
+    layout 'application'
+    Repo.any_instance.should_receive(:get_place)
+    get('get_place', id:'124')
+    response.should be_success
+    response.should render_template 'results/place'
+  end
 end

@@ -13,4 +13,7 @@ class Repo
     ]
      
    end
+   def get_place id
+     
+   end
 end
