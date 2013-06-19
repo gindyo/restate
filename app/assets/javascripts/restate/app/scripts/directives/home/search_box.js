@@ -1,5 +1,5 @@
 (function() {
-  angular.module('homePage').directive('searchBox', function() {
+  angular.module('HomePage').directive('searchBox', function() {
     return {
       restrict: 'EA',
       scope: {
@@ -52,7 +52,6 @@
           var field, regex, _i, _len, _ref;
           if (scope.search && scope.search.length > 2) {
             regex = new RegExp(scope.search, 'i');
-            console.log(attr);
             _ref = attr.searchFields.split(',');
             for (_i = 0, _len = _ref.length; _i < _len; _i++) {
               field = _ref[_i];

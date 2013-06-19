@@ -10,7 +10,7 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
-//= require bootstrap
-//= require_tree ./restate/app/components/angular
+//= require_tree ./restate/app/scripts/modules/shared
+//= require_tree ./restate/app/scripts/modules/home
+//= require_tree ./restate/app/scripts/directives/home
+//= require_tree ./restate/app/scripts/controllers/home

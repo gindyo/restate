@@ -1,7 +1,7 @@
 #the search_box element accepts the following attributes: 
 # items {string} - the name of the array with items 
 #NOTE  item is an object in the format {name: 'nameOfItem', url: 'url'}
-angular.module('homePage')
+angular.module('HomePage')
   .directive 'searchBox', ->
     restrict: 'EA'
     scope: {
@@ -52,7 +52,6 @@ angular.module('homePage')
       scope.search_filt = (item)->
         if scope.search && scope.search.length > 2
             regex = new RegExp(scope.search, 'i')
-            console.log attr
             for field in attr.searchFields.split ','
               if item[field].match(regex) != null
                 scope.show_suggestions = true
