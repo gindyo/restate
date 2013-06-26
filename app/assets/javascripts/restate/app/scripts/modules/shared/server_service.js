@@ -1,14 +1,13 @@
 (function() {
   angular.module('Server', []).service('server', function($http) {
     var all_areas, area_units;
-    area_units = function(id) {
-      var returned_data,
+    area_units = function(id, callback) {
+      var returned_data, url,
         _this = this;
       returned_data = null;
-      $http.get('/areas/' + id + '/units', {
-        success: function(data) {
-          return returned_data = data;
-        }
+      url = '/areas/' + id + '/units';
+      $http.get(url).success(function(data) {
+        return callback(data);
       });
       return returned_data;
     };

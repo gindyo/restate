@@ -9,8 +9,12 @@
       return backEnd = $injector.get('$httpBackend');
     }));
     it('gets area 1', function() {
+      var callback;
       backEnd.expectGET('/areas/1/units').respond(200, '');
-      return server.area_units(1);
+      callback = function() {
+        return 'blabla';
+      };
+      return server.area_units(1, callback);
     });
     it('gets all areas', function() {
       backEnd.expectGET('/areas/all').respond(200, 'got it');

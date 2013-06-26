@@ -9,7 +9,8 @@ describe 'server_service', ->
 
   it 'gets area 1', ->
     backEnd.expectGET('/areas/1/units').respond 200, ''
-    server.area_units(1)
+    callback = -> 'blabla'
+    server.area_units(1, callback)
 
   it 'gets all areas', ->
     backEnd.expectGET('/areas/all').respond 200, 'got it'

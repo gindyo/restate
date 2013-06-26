@@ -11,6 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require_tree ./restate/app/scripts/modules/shared
+
 //= require_tree ./restate/app/scripts/modules/results
 //= require_tree ./restate/app/scripts/directives/results
 //= require_tree ./restate/app/scripts/controllers/results

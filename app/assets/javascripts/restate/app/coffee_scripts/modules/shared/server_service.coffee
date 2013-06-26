@@ -1,10 +1,11 @@
 angular.module('Server', []).service 'server', ($http)->
-  area_units = (id)->
+  area_units = (id, callback)->
     returned_data = null
-    $http.get '/areas/'+id+'/units', {
-      success: (data)=>
-        returned_data = data
-      }
+    url = '/areas/'+id+'/units'
+    $http.get(url).
+      success (data)=>
+        callback data
+      
     return returned_data
   all_areas = (callback)->
     areas = []

@@ -9,7 +9,7 @@ describe AreasController do
 
   it "gets single area" do 
     Repo.any_instance.should_receive(:area_units).with('1').and_return([1])
-    get('area_units', area_id: 1)
+    get('index', area_id: 1)
     assigns(:units).should_not be nil
     response.should be_success
   end

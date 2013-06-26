@@ -7,9 +7,14 @@ class AreasController < ActionController::Base
     areas = repo.all_areas
     render json: areas
   end
+  def index
+    @area_id = params[:area_id]
+    @units = repo.area_units @area_id
+
+  end
   def area_units
-    @units = repo.area_units params[:area_id]
-    
+    area_units = Repo.new.area_units params[:area_id]
+    render json:  area_units
   end
   
 end

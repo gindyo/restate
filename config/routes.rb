@@ -9,5 +9,7 @@ Restate::Application.routes.draw do
   match '/units/:id' => 'units#get_unit'
   #areas
   match '/areas/all'=> 'areas#all_areas'
+  match '/areas/:area_id'=> 'areas#index'
   match '/areas/:area_id/units'=> 'areas#area_units'
+
 end

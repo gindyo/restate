@@ -1,7 +1,7 @@
 #routes_spec.rb
 describe "area routes", :type=> :routing do 
   it 'routes to single area units' do 
-    get("/areas/123/units").should route_to("areas#area_units", area_id:'123')
+    get("/areas/123/").should route_to("areas#index", area_id:'123')
   end
 
   it 'routes to all areas' do 
