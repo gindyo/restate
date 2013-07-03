@@ -2,6 +2,6 @@
   'use strict';
   var Results;
 
-  Results = angular.module('Results', ['Server']);
+  Results = angular.module('Results', ['Server', 'ui.bootstrap']);
 
 }).call(this);

@@ -4,12 +4,12 @@ class Repo
 
    def all_areas
     data =  [
-      {city: 'Ventnor, NJ', url: 'areas/1/units'},
-      {city: 'brigantine, CA', url: '/areas/2/units'},
-      {city: 'margate CA', url: 'areas/3/units'},
-      {city: 'atlantic city', url: '/areas/4/units'},
-      {city: 'ocean city', url: 'areas/5/units'},
-      {city: 'absecon', url: '/areas/6/units'}
+      {city: 'Ventnor, NJ', url: 'areas/1'},
+      {city: 'brigantine, CA', url: '/areas/2'},
+      {city: 'margate CA', url: 'areas/3'},
+      {city: 'atlantic city', url: '/areas/4'},
+      {city: 'ocean city', url: 'areas/5'},
+      {city: 'absecon', url: '/areas/6'}
     ]
      
    end
@@ -22,7 +22,7 @@ class Repo
      ]
      units = []
      for p in (0..36) do
-       units.push ({unit_id: p, price: (p), img_url: 'http://www.prufoxroach.com/mlsphotos/thumbs_320x240/127/1/77/2944178.jpg', bedrooms: 2, bathrooms: 1, address: '1 main'})
+       units.push ({unit_id: p, price: (p), img_url: 'http://www.prufoxroach.com/mlsphotos/thumbs_320x240/127/1/77/2944178.jpg', bedrooms: Random.rand(1..5), bathrooms: Random.rand(4), address: '1 main'})
           
      end
      units

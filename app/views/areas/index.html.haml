@@ -1,5 +1,20 @@
 .app(ng-app='Results')
   .rental_units(ng-controller='ResultsCtrl')
     %area(area_id ="#{@area_id}")
-    .gallery(units-gallery units= "units")
     
+    %select(ng-model = "num_units")
+      %option(value= 10) Limit results to 
+      %option(value= 10 ) 10
+      %option(value= 20 ) 20
+      %option(value= 30 ) 30
+    %select(ng-model = "order_by")
+      %option(value = 'price') Order by
+      %option(value= 'price') price
+      %option(value= 'bathrooms' ) bathrooms
+      %option(value= 'bedrooms' ) bedrooms
+      %option(value= 'address' ) address
+    %i(class = "icon-arrow-{{order_direction}}" ng-click = "reverse_order()")
+    .gallery(units-gallery units= "units")
+
+    %select(ng-model = "page" ng-options = "" )
+    %pagination(num-pages='no_of_pages' current-page='current_page' max-size="max_pages")

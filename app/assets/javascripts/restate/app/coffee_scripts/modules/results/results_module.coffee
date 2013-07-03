@@ -1,3 +1,3 @@
 'use strict';
-Results = angular.module('Results', ['Server'])
+Results = angular.module('Results', ['Server', 'ui.bootstrap'])
 

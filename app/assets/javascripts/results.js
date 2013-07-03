@@ -15,3 +15,6 @@
 //= require_tree ./restate/app/scripts/modules/results
 //= require_tree ./restate/app/scripts/directives/results
 //= require_tree ./restate/app/scripts/controllers/results
+//= require_tree ./restate/app/components/angular-bootstrap
+//= require_tree ./restate/app/components/angular-ui-bootstrap/template/pagination
+//= require_tree ./restate/app/components/angular-ui-bootstrap/src/pagination
