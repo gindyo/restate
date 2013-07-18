@@ -17,6 +17,6 @@ describe 'server_service', ->
     server.all_areas((data)-> data)
 
   afterEach ->
-    backEnd.flush()
+    #backEnd.flush()
     
 

@@ -1,7 +1,7 @@
-.app(ng-app='Results' id='ng-app' ng-cloak)
+.app(ng-app='Results' id='ng-app')
   .rental_units(ng-controller='ResultsCtrl' ng-show = 'units_loaded') 
     .area(area_id ="#{@area_id}")
-    #filters(class = 'pie')
+    #filters
       .slider_wrap(ng-show = 'units_loaded')
         %span Price Range:
         .slider(  floor="{{price_floor}}" ceiling="{{price_ceiling}}" ng-model-low="min_price" ng-model-high="max_price" translate='formatRange')
@@ -9,6 +9,8 @@
         .slider(  floor="{{bathrooms_floor}}" ceiling="{{bathrooms_ceiling}}" ng-model-low="min_bathrooms" ng-model-high="max_bathrooms")
         %span Bedrooms Range:
         .slider(  floor="{{bedrooms_floor}}" ceiling="{{bedrooms_ceiling}}" ng-model-low="min_bedrooms" ng-model-high="max_bedrooms" ng-mouseup='set_range()')
+
+      
     %select(ng-model = "num_units")
       %option(value= 8) Limit results to 
       %option(value= 4 ) 4
@@ -24,8 +26,11 @@
       %option(value= 'address' ) address
     %i(class = "icon-arrow-{{order_direction}}" ng-click = "reverse_order()")
     showing {{units_in_range_indexes.length}} from: {{area_units.length}}
-    #gallery_wrap(ng-show = 'units_loaded')
-      .gallery(units-gallery units="page_units" on-unit-click='open_unit')
+    #gallery_wrap
+      /[if lt IE 10]
+        .gallery(units-gallery units="page_units" fallback='false')
+      /[else]
+        -#.gallery(units-gallery units="page_units" fallback='true')
       .clear
       .pagination_wrap
         %span.pagination(pagination num-pages='numPages' current-page='currentPage' max-size="maxSize" on-select-page="selectPage(page)")
@@ -33,6 +38,7 @@
           go to page:
           %input.number(type='number' ng-model='currentPage' min = "1")
           from {{numPages}}
-    
+    #modal.fade(modal='open_loading_modal' close='!open_loading_modal' options="{dialogFade: true}" )
+      %h3.text-center Loading ...
 
 

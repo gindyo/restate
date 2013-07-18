@@ -1,6 +1,6 @@
 angular.module('Results')
   .directive 'area', ->
-    restrict: 'AE'
+    restrict: 'AC'
     link: (scope, element, attr)-> 
       scope.area_id = attr.areaId
      

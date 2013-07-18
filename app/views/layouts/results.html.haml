@@ -8,8 +8,12 @@
         = javascript_include_tag "results"
         = stylesheet_link_tag "application", :media => "all"
         = stylesheet_link_tag "results", :media => "all"
+        = stylesheet_link_tag "results/angular-slider.min", :media => "all"
+        = stylesheet_link_tag "//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css", :media => "all"
         = csrf_meta_tags
         = yield(:head)
+        /[if lt IE 10] 
+          %script(src="o/assets/IE8" language="javascript")
   %body{:class => "#{controller_name} #{action_name}"}
     .navbar.navbar-fixed-top
       %nav.navbar-inner

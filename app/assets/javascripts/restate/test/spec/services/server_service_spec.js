@@ -22,9 +22,7 @@
         return data;
       });
     });
-    return afterEach(function() {
-      return backEnd.flush();
-    });
+    return afterEach(function() {});
   });
 
 }).call(this);
