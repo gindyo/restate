@@ -1,0 +1,39 @@
+<div class='pie' id='filters'>
+  <div class='slider_wrap' ng-show='units_loaded'>
+    <span>Price Range:</span>
+    <div ceiling='{{price_ceiling}}' slider class='slider' floor='{{price_floor}}' ng-model-high='max_price' ng-model-low='min_price' translate='formatRange'></div>
+    <span>Bathrooms Range:</span>
+    <div ceiling='{{bathrooms_ceiling}}' class='slider' floor='{{bathrooms_floor}}' ng-model-high='max_bathrooms' ng-model-low='min_bathrooms'></div>
+    <span>Bedrooms Range:</span>
+    <div ceiling='{{bedrooms_ceiling}}' class='slider' floor='{{bedrooms_floor}}' ng-model-high='max_bedrooms' ng-model-low='min_bedrooms' ng-mouseup='set_range()'></div>
+  </div>
+</div>
+<select ng-model='num_units'>
+  <option value='8'>Limit results to</option>
+  <option value='4'>4</option>
+  <option value='8'>8</option>
+  <option value='16'>16</option>
+  <option value='32'>32</option>
+  <option value='64'>64</option>
+</select>
+<select ng-model='order_by'>
+  <option value='price'>Order by</option>
+  <option value='price'>price</option>
+  <option value='bathrooms'>bathrooms</option>
+  <option value='bedrooms'>bedrooms</option>
+  <option value='address'>address</option>
+</select>
+<i class='icon-arrow-{{order_direction}}' ng-click='reverse_order()'></i>
+showing {{units_in_range_indexes.length}} from: {{area_units.length}}
+<div id='gallery_wrap' ng-show='units_loaded'>
+  <div class='gallery' on-unit-click='open_unit' re-units-gallery units='page_units'></div>
+  <div class='clear'></div>
+  <div class='pagination_wrap'>
+    <span class='pagination' current-page='currentPage' max-size='maxSize' num-pages='numPages' on-select-page='selectPage(page)' pagination></span>
+    <span id='to_page'>
+      go to page:
+      <input class='number' min='1' ng-model='currentPage' type='number'>
+      from {{numPages}}
+    </span>
+  </div>
+</div>
