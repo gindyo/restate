@@ -20,7 +20,7 @@
         border-radius: 10px;
         border: 1px solid #a8a4a4;
         font-family: "helvetica";
-        width: 165px;
+        width: 25%;
         height: 265px;
         behavior: url(/assets/PIE.htc);
       '     

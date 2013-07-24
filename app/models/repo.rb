@@ -7,7 +7,7 @@ class Repo
       {city: 'Ventnor, NJ', url: 'areas/1'},
       {city: 'brigantine, CA', url: 'areas/2'},
       {city: 'margate CA', url: 'areas/3'},
-      {city: 'atlantic city', url: '/#/areas/4'},
+      {city: 'atlantic city', url: 'areas/4'},
       {city: 'ocean city', url: 'areas/5'},
       {city: 'absecon', url: '#/areas/6'}
     ]

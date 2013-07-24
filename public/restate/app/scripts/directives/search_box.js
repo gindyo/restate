@@ -38,7 +38,7 @@
         <div ng-show="show_suggestions" class="search_box_links_containter">\
           <div style="width: {{width}}" class ="search_box_links" ng-repeat = "item in items  | filter:search_filt" > \
             \
-            <a class="search_box_link" href="{{item.url}}"> {{item.city}}</a> \
+            <a class="search_box_link" href="#/{{item.url}}"> {{item.city}}</a> \
           </div>\
         </div>\
       <div>\

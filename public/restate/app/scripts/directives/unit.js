@@ -4,17 +4,10 @@
       restrict: 'AC',
       scope: {
         unit: '=',
-        onUnitClicked: '&'
+        onUnitClicked: '&',
+        unitWidth: '='
       },
-      t: '\
-      <div class = "rental_unit_style pie" >\
-          <h5 class="heading_style  heading_1_style pull-right">{{unit.bedrooms}}bd/{{unit.bathrooms}}ba</h4>\
-          <h4 class ="heading_style heading_1_style pull-center">${{unit.price}}</h3>\
-          <img ng-src="{{unit.img_url}}" class="pull-center image_style" ng-click ="onUnitClicked(unit.id)">\
-          <p>{{unit.address}}</p>\
-        </div>\
-    ',
-      compile: function(element) {
+      compile: function(element, attrs) {
         var h4, h5, img, p, rentalUnit;
         rentalUnit = document.createElement('div');
         h5 = document.createElement('h5');
@@ -37,8 +30,8 @@
         border-radius: 10px;\
         border: 1px solid #a8a4a4;\
         font-family: "helvetica";\
-        width: 165px;\
-        height: 265px;\
+        height: 250px;\
+        width: 200px\
         ');
         angular.element(h5).attr('style', '\
           color: #605959;\

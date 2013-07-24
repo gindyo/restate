@@ -4,7 +4,8 @@
     #filters(class = 'pie')
       .slider_wrap(ng-show = 'units_loaded')
         %span Price Range:
-        .slider(  floor="{{price_floor}}" ceiling="{{price_ceiling}}" ng-model-low="min_price" ng-model-high="max_price" translate='formatRange')
+        %input( type="number" min="{{price_floor}}" max="{{price_ceiling}}" ng-model="min_price")
+        %input( type = "number" min {{price_floor}} max ="{{price_ceiling}} ng-model ="max_price")
         %span Bathrooms Range:
         .slider(  floor="{{bathrooms_floor}}" ceiling="{{bathrooms_ceiling}}" ng-model-low="min_bathrooms" ng-model-high="max_bathrooms")
         %span Bedrooms Range:

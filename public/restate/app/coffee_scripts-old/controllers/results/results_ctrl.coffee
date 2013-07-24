@@ -1,6 +1,5 @@
 angular.module('Results').controller 'ResultsCtrl', ($scope, server, $filter)->
   $scope.show_filters = false
-  $scope.units_in_range_indexes = []
   $scope.area_units = []
   $scope.page_units = []
   $scope.reverse_it = false
@@ -10,17 +9,21 @@ angular.module('Results').controller 'ResultsCtrl', ($scope, server, $filter)->
   limit_to_filter = $filter('limitTo')
   order_by_filter = $filter('orderBy')
   sorted_fields = ['price', 'bathrooms', 'bedrooms']
-  ############### price range ##########
-  $scope.price_floor = 0
-  $scope.price_ceiling = 0
-  ############### bathroom range ##########
-  $scope.bathroom_floor = 0
-  $scope.bathroom_ceiling = 0
-  $scope.open_loading_modal = true
+  $scope.units = {}
+  $scope.units.in_range = {}
+  $scope.units.in_range.indexes = []
+  filter = (name, low, high)->
+    low: low
+    high: high
+  $scope.units.filters = {
+      price: filter(0,0)
+      bathrooms: filter(0,0)
+      bedrooms: filter(0,0)
+    }
   
-  $scope.units_in_range = ->
+  $scope.units.in_range = ->
     units = []
-    for i in $scope.units_in_range_indexes
+    for i in $scope.units.in_range.indexes
       units.push $scope.area_units[i]
     units
     
@@ -48,15 +51,13 @@ angular.module('Results').controller 'ResultsCtrl', ($scope, server, $filter)->
     bathrooms_sorted = order_by_filter $scope.area_units, 'bathrooms'
     bedrooms_sorted = order_by_filter $scope.area_units, 'bedrooms'
     for i in [0..$scope.area_units.length-1]
-      $scope.units_in_range_indexes.push i 
-  
+      $scope.units.in_range.indexes.push i 
+    f = $scope.units.filters
     for field in sorted_fields
       if eval(field+'_sorted.length') > 0
-        $scope['min_' + field] = eval(field + '_sorted[0].' + field)
-        $scope['max_' + field] = eval(field + '_sorted[' + field + '_sorted.length-1].'+ field)
-        $scope[field + '_floor'] =  $scope['min_' + field]
-        $scope[field + '_ceiling'] = $scope['max_' + field]
-   
+        f[field].low = eval(field + '_sorted[0].' + field)
+        f[field].high = eval(field + '_sorted[' + field + '_sorted.length-1].'+ field)
+        
     $scope.page_units = $scope.units_in_range()[0..$scope.num_units-1]
     price_sorted = bathrooms_sorted = bedrooms_sorted = null
   
@@ -68,16 +69,17 @@ angular.module('Results').controller 'ResultsCtrl', ($scope, server, $filter)->
     el.bedrooms >= $scope.min_bedrooms &&
     el.bedrooms <= $scope.max_bedrooms 
 
-  $scope.$watch 'max_price + min_price + min_bathrooms + max_bathrooms + max_bedrooms + min_bedrooms', ->
-    $scope.units_in_range_indexes = []
+  $scope.$watch 'units.filters.price.low'# 'max_price + min_price + min_bathrooms + max_bathrooms + max_bedrooms + min_bedrooms', ->
+    console.log 'hi'
+    $scope.units.in_range.indexes = []
     if !Array.prototype.filter
       $($scope.area_units).filter  (i)->
         if is_in_range(this)
-          $scope.units_in_range_indexes.push i 
+          $scope.units.in_range.indexes.push i 
     else
       $scope.area_units.filter (el, i)->
         if is_in_range(el)
-          $scope.units_in_range_indexes.push i
+          $scope.units.in_range.indexes.push i
       
 
   $scope.$watch 'num_units', ->
@@ -89,7 +91,7 @@ angular.module('Results').controller 'ResultsCtrl', ($scope, server, $filter)->
     if $scope.reverse_it then $scope.order_direction = 'down' else $scope.order_direction = 'up'
     $scope.numPages = Math.ceil ($scope.units_in_range().length / $scope.num_units)
   
-  $scope.$watch '[order_by, reverse_it, units_in_range_indexes] | json', ->
+  $scope.$watch '[order_by, reverse_it, units.in_range.indexes] | json', ->
     ordered_units = order_by_filter $scope.units_in_range(), $scope.order_by, $scope.reverse_it
     $scope.page_units = limit_to_filter ordered_units, $scope.num_units
     $scope.numPages = Math.ceil ($scope.units_in_range().length / $scope.num_units)

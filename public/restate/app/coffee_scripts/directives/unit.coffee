@@ -4,16 +4,9 @@
     scope: {
       unit: '='
       onUnitClicked: '&'
+      unitWidth: '='
     }
-    t: '
-      <div class = "rental_unit_style pie" >
-          <h5 class="heading_style  heading_1_style pull-right">{{unit.bedrooms}}bd/{{unit.bathrooms}}ba</h4>
-          <h4 class ="heading_style heading_1_style pull-center">${{unit.price}}</h3>
-          <img ng-src="{{unit.img_url}}" class="pull-center image_style" ng-click ="onUnitClicked(unit.id)">
-          <p>{{unit.address}}</p>
-        </div>
-    '
-    compile: (element)->
+    compile: (element, attrs)->
       rentalUnit = document.createElement('div')
       h5 = document.createElement('h5')
       h5.innerHTML = '{{unit.bedrooms}}bd/{{unit.bathrooms}}ba'
@@ -32,15 +25,14 @@
       element.addClass('round')
 
 
-
       angular.element(rentalUnit).attr('style', '
         background: #FEFEFA;
         padding: 10px;
         border-radius: 10px;
         border: 1px solid #a8a4a4;
         font-family: "helvetica";
-        width: 165px;
-        height: 265px;
+        height: 250px;
+        width: 200px
         '     
       )
 

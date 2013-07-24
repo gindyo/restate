@@ -1,7 +1,7 @@
 Restate::Application.routes.draw do
   #root :to => 'home#index'
   #Search routes
-  match '/', :to => redirect('/restate/app/')
+  match '/', :to => redirect('/restate/app/#/')
   match '/search' => 'search#index'
   match '/geography/:city/:state/:country' => 'search#geography'
   match '/geography/:city/:state' => 'search#geography'

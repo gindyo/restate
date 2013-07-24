@@ -1,11 +1,19 @@
 <div class='pie' id='filters'>
   <div class='slider_wrap' ng-show='units_loaded'>
     <span>Price Range:</span>
-    <div ceiling='{{price_ceiling}}' slider class='slider' floor='{{price_floor}}' ng-model-high='max_price' ng-model-low='min_price' translate='formatRange'></div>
+    <br>
+    <span>from</span>
+    <input ng-model='units.max.price' type = 'number' size ="'1" class ="input-small" step = "1000">
+    <br>
+    <span>to</span>
+    <input ng-model='units.min.price'  type = 'number' class = "input-small" step = "1000">
     <span>Bathrooms Range:</span>
     <div ceiling='{{bathrooms_ceiling}}' class='slider' floor='{{bathrooms_floor}}' ng-model-high='max_bathrooms' ng-model-low='min_bathrooms'></div>
     <span>Bedrooms Range:</span>
     <div ceiling='{{bedrooms_ceiling}}' class='slider' floor='{{bedrooms_floor}}' ng-model-high='max_bedrooms' ng-model-low='min_bedrooms' ng-mouseup='set_range()'></div>
+    <div re-slider min="{{units.filters.price.min}}" max='{{units.filters.price.max}}' ng-model-lo="units.filters.price.low" ng-model-hi = "units.filters.price.high"></div>
+    <br>
+    <!-- <div re-slider min="{{units.filters.bathrooms.min}}" max='{{units.filters.bathrooms.max}}' ng-model-lo="units.filters.bathrooms.low" ng-model-hi = "units.filters.bathrooms.high"></div> -->
   </div>
 </div>
 <select ng-model='num_units'>
@@ -25,8 +33,7 @@
 </select>
 <i class='icon-arrow-{{order_direction}}' ng-click='reverse_order()'></i>
 showing {{units_in_range_indexes.length}} from: {{area_units.length}}
-<div id='gallery_wrap' ng-show='units_loaded'>
-  <div class='gallery' on-unit-click='open_unit' re-units-gallery units='page_units'></div>
+  <div class='gallery' on-unit-click='open_unit' re-units-gallery units='page_units' gallery-width="950" per-row = "5"></div>
   <div class='clear'></div>
   <div class='pagination_wrap'>
     <span class='pagination' current-page='currentPage' max-size='maxSize' num-pages='numPages' on-select-page='selectPage(page)' pagination></span>

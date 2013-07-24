@@ -23,7 +23,7 @@ module.exports = function (grunt) {
     watch: {
       karma: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.js',
-                'test/spec/{,*/}*.js'],
+                'test/spec/{,*/}{,*/}*.js'],
         tasks: ['karma:unit:run']
       },
       coffee: {

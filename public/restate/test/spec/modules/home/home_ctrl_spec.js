@@ -1,5 +1,5 @@
 (function() {
-  describe('MainCtrl', function() {
+  describe('HomeCtrl', function() {
     var controller, scope,
       _this = this;
     controller = null;
@@ -13,7 +13,7 @@
           return callback('i was called');
         }
       };
-      return controller = $injector.get('$controller')('MainCtrl', {
+      return controller = $injector.get('$controller')('HomeCtrl', {
         $scope: scope,
         server: server
       });

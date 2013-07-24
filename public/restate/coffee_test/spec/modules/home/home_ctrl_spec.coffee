@@ -1,4 +1,4 @@
-describe 'MainCtrl', ->
+describe 'HomeCtrl', ->
   controller = null
   scope = {}
   
@@ -10,7 +10,7 @@ describe 'MainCtrl', ->
     server = {
       all_areas: (callback)->  callback 'i was called'
     }
-    controller = $injector.get('$controller')('MainCtrl', {
+    controller = $injector.get('$controller')('HomeCtrl', {
         $scope: scope
         server: server
       })
