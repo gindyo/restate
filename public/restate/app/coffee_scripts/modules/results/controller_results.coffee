@@ -1,7 +1,12 @@
 Results = angular.module('Results', ['Server'])
 
-Results.controller 'ResultsCtrl', ($scope, server, $filter)->
-  $scope.area_units = 'i was called'
+Results.controller 'ResultsCtrl', ($scope, server, Units)->
+  $scope.units = Units
+  $scope.units.load()
+  
+  
+  
+
   
   # $scope.area_units = []
   # $scope.page_units = []

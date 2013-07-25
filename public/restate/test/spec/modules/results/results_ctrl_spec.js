@@ -5,7 +5,7 @@
     controller = null;
     scope = {};
     beforeEach(module('Results'));
-    beforeEach(inject(function($injector) {
+    return beforeEach(inject(function($injector) {
       var server;
       scope = $injector.get('$rootScope').$new;
       server = {};
@@ -14,9 +14,6 @@
         server: server
       });
     }));
-    return it('gets area_units from server', function() {
-      return expect(scope.area_units).toEqual('i was called');
-    });
   });
 
 }).call(this);

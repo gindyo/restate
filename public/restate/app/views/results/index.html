@@ -33,7 +33,7 @@
 </select>
 <i class='icon-arrow-{{order_direction}}' ng-click='reverse_order()'></i>
 showing {{units_in_range_indexes.length}} from: {{area_units.length}}
-  <div class='gallery' on-unit-click='open_unit' re-units-gallery units='page_units' gallery-width="950" per-row = "5"></div>
+  <div class='gallery' on-unit-click='open_unit' re-units-gallery units='units.current_page' gallery-width="950" per-row = "5"></div>
   <div class='clear'></div>
   <div class='pagination_wrap'>
     <span class='pagination' current-page='currentPage' max-size='maxSize' num-pages='numPages' on-select-page='selectPage(page)' pagination></span>
