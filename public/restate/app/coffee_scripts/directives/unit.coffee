@@ -13,7 +13,7 @@
       h4 = document.createElement('h4')
       h4.innerHTML = '${{unit.price}}'
       img = document.createElement('img')
-      img.setAttribute('ng-src', '{{unit.img_url}}')
+      img.setAttribute('ng-src', '{{unit.imgUrl}}')
       p = document.createElement('p')
       p.innerHTML = '{{unit.address}}'
 

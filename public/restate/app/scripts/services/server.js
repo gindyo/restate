@@ -1,17 +1,17 @@
 (function() {
   angular.module('Server', []).service('server', function($http) {
-    var all_areas, area_units;
-    area_units = function(id, callback) {
-      var returned_data, url,
+    var allAreas, areaUnits;
+    areaUnits = function(id, callback) {
+      var returnedData, url,
         _this = this;
-      returned_data = null;
+      returnedData = null;
       url = '/areas/' + id + '/units';
       $http.get(url).success(function(data) {
         return callback(data);
       });
-      return returned_data;
+      return returnedData;
     };
-    all_areas = function(callback) {
+    allAreas = function(callback) {
       var areas,
         _this = this;
       areas = [];
@@ -20,8 +20,8 @@
       });
     };
     return {
-      area_units: area_units,
-      all_areas: all_areas
+      areaUnits: areaUnits,
+      allAreas: allAreas
     };
   });
 

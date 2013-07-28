@@ -13,9 +13,7 @@
 
     link: (scope, element, attrs)->
       scope.$watch 'units',  ->
-        angular.element(document).find('.units_gallery_inner').css('display', 'none')
-        angular.element(document).find('.units_gallery_inner').css('display', 'block') if scope.units.length > 0
-        scope.page_units = scope.units
+       scope.page_units = scope.units
 
        
        

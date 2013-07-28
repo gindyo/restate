@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('Restate', ['Results', 'HomePage', 'RestateDirectives']).config ($routeProvider) ->
+angular.module('Restate', ['Results', 'HomePage', 'RestateDirectives', 'ui.bootstrap']).config ($routeProvider) ->
   $routeProvider
     .when('/', {
       controller: 'HomeCtrl'

@@ -1,9 +1,20 @@
 Results = angular.module('Results', ['Server'])
 
 Results.controller 'ResultsCtrl', ($scope, server, Units)->
+  $scope.slidingMin = 0
+  $scope.slidingMax = 0
   $scope.units = Units
-  $scope.units.load()
-  
+  $scope.units.load(1)
+  $scope.$watch '[units.all[0], units.pagination, units.filters] | json', ->
+    console.log $scope.units.all
+    $scope.units.applyFilters()
+    $scope.currentPage = $scope.units.currentPage()
+    $scope.units.loaded = true  
+  $scope.changePage = (pNum)-> $scope.units.pagination.currentPage = pNum
+
+  $scope.testSort = ->
+    console.log $scope.units.all
+    $scope.units.mergeSort($scope.units.all, 0)
   
   
 
