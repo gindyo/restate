@@ -110,8 +110,7 @@ angular.module('Results').service 'Units', (server, $filter)->
         unit.address = u[data.meta.address]
         all.push unit
       console.time('timer')
-      mergeSort(all, 1)
-      
+      console.log quickSort(all, 1)
       console.timeEnd('timer')
 
 
@@ -183,6 +182,34 @@ angular.module('Results').service 'Units', (server, $filter)->
         while m1.length > 0
           sorted.push m1.shift()
         return sorted
+
+  quickSort = (arr, pos)->
+    if arr.length <= 1
+      return arr
+    else
+      midpoint = Math.floor arr.length/2
+      pivot = arr[midpoint]
+      left = 0
+      right = arr.length-1
+      while left < midpoint-1 && right > midpoint+1
+        if arr[length][pos] > pivot[pos] && arr[right][pos] < pivot[pos]
+          temp = arr[right]
+          arr[right] = arr[left]
+          arr[right] = temp
+          left = left + 1
+          right = right-1
+        else
+          if arr[length][pos] > pivot[pos] && arr[right][pos] > pivot[pos]
+            right = right-1
+          else if arr[length][pos] < pivot[pos] && arr[right][pos] < pivot[pos]
+            left = left-1
+      lsorted = quickSort(arr[0..midpoint], pos)
+      rsorted = quickSort(right[midpoint..arr.length-1], pos)
+      lsorted.concat(rsorted)
+
+
+
+
 
 
 

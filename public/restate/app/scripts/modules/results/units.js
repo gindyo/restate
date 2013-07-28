@@ -1,6 +1,6 @@
 (function() {
   angular.module('Results').service('Units', function(server, $filter) {
-    var all, applyFilters, calculateNumOfPages, convertToUnit, currentPage, filters, getEdges, isInRange, load, mergeSort, meta, orderByFilter, pagination, selectPage, sortedUnits, splitArr, unitsInRange;
+    var all, applyFilters, calculateNumOfPages, convertToUnit, currentPage, filters, getEdges, isInRange, load, mergeSort, meta, orderByFilter, pagination, quickSort, selectPage, sortedUnits, splitArr, unitsInRange;
     all = [];
     meta = [];
     orderByFilter = $filter('orderBy');
@@ -96,7 +96,7 @@
           all.push(unit);
         }
         console.time('timer');
-        mergeSort(all, 1);
+        console.log(quickSort(all, 1));
         console.timeEnd('timer');
         meta = data.meta;
         price_edges = getEdges(data.units, 'price');
@@ -175,6 +175,35 @@
           }
           return sorted;
         }
+      }
+    };
+    quickSort = function(arr, pos) {
+      var left, lsorted, midpoint, pivot, right, rsorted, temp;
+      if (arr.length <= 1) {
+        return arr;
+      } else {
+        midpoint = Math.floor(arr.length / 2);
+        pivot = arr[midpoint];
+        left = 0;
+        right = arr.length - 1;
+        while (left < midpoint - 1 && right > midpoint + 1) {
+          if (arr[length][pos] > pivot[pos] && arr[right][pos] < pivot[pos]) {
+            temp = arr[right];
+            arr[right] = arr[left];
+            arr[right] = temp;
+            left = left + 1;
+            right = right - 1;
+          } else {
+            if (arr[length][pos] > pivot[pos] && arr[right][pos] > pivot[pos]) {
+              right = right - 1;
+            } else if (arr[length][pos] < pivot[pos] && arr[right][pos] < pivot[pos]) {
+              left = left - 1;
+            }
+          }
+        }
+        lsorted = quickSort(arr.slice(0, +midpoint + 1 || 9e9), pos);
+        rsorted = quickSort(right.slice(midpoint, +(arr.length - 1) + 1 || 9e9), pos);
+        return lsorted.concat(rsorted);
       }
     };
     return {
