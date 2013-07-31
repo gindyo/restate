@@ -16,10 +16,12 @@
       img.setAttribute('ng-src', '{{unit.imgUrl}}')
       p = document.createElement('p')
       p.innerHTML = '{{unit.address}}'
-
+      a = document.createElement 'a'
+      a.setAttribute 'href', '#/units/{{unit.id}}'
+      angular.element(a).append img
       angular.element(rentalUnit).append(h5)
       angular.element(rentalUnit).append(h4)
-      angular.element(rentalUnit).append(img)
+      angular.element(rentalUnit).append(a)
       angular.element(rentalUnit).append(p)
       element.append(rentalUnit)
       element.addClass('round')

@@ -1,19 +1,18 @@
 <div class='pie' id='filters'>
-  <div class='slider_wrap' ng-show='units.loaded'>
+  <div class='slider_wrap'>
     <span>Price Range:</span>
     <div class="text-center">{{units.filters.ranges.price.current[0]}}-{{units.filters.ranges.price.current[1]}}</div>
-    <div re-slider min="{{units.filters.ranges.price.edges[0]}}" max='{{units.filters.ranges.price.edges[1]}}' ng-model-lo="units.filters.ranges.price.current[0]" ng-model-hi = "units.filters.ranges.price.current[1]"></div>
+    <div re-slider min="{{units.filters.ranges.price.edges[0]}}" max='{{units.filters.ranges.price.edges[1]}}' slider-change='priceSliderChange(values)'></div>
     <br>
     <span>Bedrooms Range:</span>
     <div class="text-center">{{units.filters.ranges.bedrooms.current[0]}}-{{units.filters.ranges.bedrooms.current[1]}}</div>
-    <div re-slider min="{{units.filters.ranges.bedrooms.edges[0]}}" max='{{units.filters.ranges.bedrooms.edges[1]}}' ng-model-lo="units.filters.ranges.bedrooms.current[0]" ng-model-hi = "units.filters.ranges.bedrooms.current[1]"></div>
+    <div re-slider min="{{units.filters.ranges.bedrooms.edges[0]}}" max='{{units.filters.ranges.bedrooms.edges[1]}}' slider-change='bedroomsSliderChange(values)'></div>
     <br> 
     <span>Bathrooms Range:</span>
     <br>
 
     <div class="text-center">{{units.filters.ranges.bathrooms.current[0]}}-{{units.filters.ranges.bathrooms.current[1]}}</div>
-    <div re-slider min="{{units.filters.ranges.bathrooms.edges[0]}}" max='{{units.filters.ranges.bathrooms.edges[1]}}' ng-model-lo="units.filters.ranges.bathrooms.current[0]" ng-model-hi = "units.filters.ranges.bathrooms.current[1]"></div>
-    <button ng-click='testSort()'>test</button>
+    <div re-slider min="{{units.filters.ranges.bathrooms.edges[0]}}" max='{{units.filters.ranges.bathrooms.edges[1]}}' slider-change='bathroomsSliderChange(values)'></div>
   </div>
 
 </div>
@@ -32,12 +31,12 @@
   <option value='bedrooms'>bedrooms</option>
   <option value='address'>address</option>
 </select>
-<i class='icon-arrow-{{order_direction}}' ng-click='reverse_order()'></i>
-showing {{units.filters.inRangeIndexes.length}} from: {{units.all.length}}
+<i class='icon-arrow-{{units.filters.orderDirection()}}' ng-click='reverseOrder()'></i>
+showing {{units.filters.inRangeIndexes.length}} from: {{units.pagination.totalUnits()}}
   <div class='gallery' on-unit-click='open_unit' re-units-gallery units='currentPage' gallery-width="950" per-row = "5"></div>
   <div class='clear'></div>
   <div class='pagination_wrap'>
-    <span class='pagination' current-page='units.pagination.currentPage' max-size='5' num-pages='units.pagination.numOfPages()' on-select-page='changePage' pagination></span>
+    <span class='pagination' current-page='units.pagination.currentPage' max-size='5' num-pages='units.pagination.numOfPages()' on-select-page='changePage(page)' pagination></span>
     <span id='to_page'>
       go to page:
       <input class='number' min='1' ng-model='units.pagination.currentPage' type='number'>

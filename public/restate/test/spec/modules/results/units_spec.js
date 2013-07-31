@@ -54,10 +54,12 @@
       _this.units.pagination.numPerPage = 1;
       return expect(_this.units.pagination.numOfPages()).toEqual(3);
     });
-    return it('sorts an array', function() {
-      var units;
-      units = [[15001, 0, "15001.0.TH.jpg", 2, 5, "1 main"], [15024, 506887, "15024.0.TH.jpg", 6, 4, "1 main"], [15025, 598336, "15025.0.TH.jpg", 1, 1, "1 main"], [15028, 276040, "15028.0.TH.jpg", 7, 3, "1 main"], [15060, 667188, "15060.0.TH.jpg", 2, 6, "1 main"], [15084, 591504, "15084.0.TH.jpg", 7, 8, "1 main"]];
-      return expect(_this.units.mergeSort(units, 1)[0]).toEqual([15001, 0, "15001.0.TH.jpg", 2, 5, "1 main"]);
+    return it('returns current page', function() {
+      _this.units.load(1);
+      _this.units.applyFilters();
+      _this.units.pagination.numPerPage = 2;
+      _this.units.pagination.currentPage = 1;
+      return expect(_this.units.currentPage().length).toEqual(2);
     });
   });
 

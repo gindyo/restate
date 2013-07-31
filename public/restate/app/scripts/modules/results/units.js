@@ -1,25 +1,44 @@
 (function() {
-  angular.module('Results').service('Units', function(server, $filter) {
-    var all, applyFilters, calculateNumOfPages, convertToUnit, currentPage, filters, getEdges, isInRange, load, mergeSort, meta, orderByFilter, pagination, quickSort, selectPage, sortedUnits, splitArr, unitsInRange;
+  angular.module('Results').service('Units', function(server) {
+    var all, allUnits, applyFilters, calculateNumOfPages, convertToUnit, currentPage, filters, getEdges, isInRange, load, mergeSort, meta, pagination, selectPage, sortUnits, splitArr, unitsInRange;
     all = [];
-    meta = [];
-    orderByFilter = $filter('orderBy');
+    meta = {};
+    filters = {};
     pagination = {};
+    allUnits = function() {
+      var u, units, _i, _len;
+      units = [];
+      for (_i = 0, _len = all.length; _i < _len; _i++) {
+        u = all[_i];
+        units.push(convertToUnit(u));
+      }
+      return units;
+    };
     calculateNumOfPages = function() {
-      if (all.length > pagination.numPerPage) {
-        return Math.ceil(all.length / pagination.numPerPage);
+      if (filters.inRangeIndexes.length > pagination.numPerPage) {
+        return Math.ceil(filters.inRangeIndexes.length / pagination.numPerPage);
       } else {
         return 1;
       }
     };
     pagination = {
+      totalUnits: function() {
+        return all.length;
+      },
       currentPage: 1,
       numPerPage: 8
     };
     pagination['numOfPages'] = calculateNumOfPages;
+    filters['reverseIt'] = false;
     filters = {
       orderBy: 'price',
-      reverseIt: false,
+      orderDirection: function() {
+        if (this.reverseIt) {
+          return 'up';
+        } else {
+          return 'down';
+        }
+      },
       inRangeIndexes: [],
       ranges: {
         price: {
@@ -40,33 +59,33 @@
       return el['price'] >= filters.ranges.price.current[0] && el['price'] <= filters.ranges.price.current[1] && el['bathrooms'] >= filters.ranges.bathrooms.current[0] && el['bathrooms'] <= filters.ranges.bathrooms.current[1] && el['bedrooms'] >= filters.ranges.bedrooms.current[0] && el['bedrooms'] <= filters.ranges.bedrooms.current[1];
     };
     applyFilters = function() {
+      var i, u, _i, _len, _ref, _results;
       filters.inRangeIndexes = [];
-      if (!Array.prototype.filter) {
-        return $(all).filter(function(i) {
-          if (isInRange(this)) {
-            return filters.inRangeIndexes.push(i);
-          }
-        });
-      } else {
-        return all.filter(function(el, i) {
-          if (isInRange(el)) {
-            return filters.inRangeIndexes.push(i);
-          }
-        });
+      _ref = allUnits();
+      _results = [];
+      for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
+        u = _ref[i];
+        if (isInRange(u)) {
+          _results.push(filters.inRangeIndexes.push(i));
+        } else {
+          _results.push(void 0);
+        }
       }
+      return _results;
     };
     getEdges = function(obj, field) {
-      var max, min;
+      var el, max, min, _i, _len;
       min = obj[0][meta[field]];
       max = obj[1][meta[field]];
-      obj.filter(function(el) {
+      for (_i = 0, _len = obj.length; _i < _len; _i++) {
+        el = obj[_i];
         if (el[meta[field]] < min) {
           min = el[meta[field]];
         }
         if (el[meta[field]] > max) {
-          return max = el[meta[field]];
+          max = el[meta[field]];
         }
-      });
+      }
       return [min, max];
     };
     convertToUnit = function(u) {
@@ -82,22 +101,12 @@
     };
     load = function(id) {
       return server.areaUnits(id, function(data) {
-        var bathrooms_edges, bedrooms_edges, i, price_edges, u, unit, _i, _len, _ref;
+        var bathrooms_edges, bedrooms_edges, price_edges, u, _i, _len, _ref;
         _ref = data.units;
-        for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
-          u = _ref[i];
-          unit = {};
-          unit.id = u[data.meta.id];
-          unit.price = u[data.meta.price];
-          unit.imgUrl = data.meta.img_domain + u[data.meta.img_url];
-          unit.bedrooms = u[data.meta.bedrooms];
-          unit.bathrooms = u[data.meta.bathrooms];
-          unit.address = u[data.meta.address];
-          all.push(unit);
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          u = _ref[_i];
+          all.push(u);
         }
-        console.time('timer');
-        console.log(quickSort(all, 1));
-        console.timeEnd('timer');
         meta = data.meta;
         price_edges = getEdges(data.units, 'price');
         bathrooms_edges = getEdges(data.units, 'bathrooms');
@@ -107,11 +116,23 @@
         filters.ranges.bathrooms.current = [bathrooms_edges[0], bathrooms_edges[1]];
         filters.ranges.bathrooms.edges = [bathrooms_edges[0], bathrooms_edges[1]];
         filters.ranges.bedrooms.current = [bedrooms_edges[0], bedrooms_edges[1]];
-        return filters.ranges.bedrooms.edges = [bedrooms_edges[0], bedrooms_edges[1]];
+        filters.ranges.bedrooms.edges = [bedrooms_edges[0], bedrooms_edges[1]];
+        return applyFilters();
       });
     };
-    sortedUnits = function() {
-      return all = orderByFilter(all, filters.orderBy, filters.reverseIt);
+    sortUnits = function() {
+      var i, reversed, _i, _len;
+      if (all.length > 0) {
+        all = mergeSort(all, meta[filters.orderBy]);
+        if (filters.reverseIt) {
+          reversed = [];
+          for (_i = 0, _len = all.length; _i < _len; _i++) {
+            i = all[_i];
+            reversed.push(all.pop());
+          }
+          return all = reversed;
+        }
+      }
     };
     unitsInRange = function() {
       var i, units, _i, _len, _ref;
@@ -124,20 +145,21 @@
       return units;
     };
     selectPage = function(pNum) {
-      var i, orderedUnits, pageUnits, perPageUnits, _i, _ref, _ref1;
+      var allu, i, numPerPage, pageUnits, perPageUnits, _i, _ref, _ref1;
       pNum = pNum - 1;
       perPageUnits = parseInt(pagination.numPerPage) - 1;
-      orderedUnits = orderByFilter(unitsInRange(), filters.orderBy, filters.reverseIt);
+      numPerPage = parseInt(pagination.numPerPage);
       pageUnits = [];
-      for (i = _i = _ref = pNum * pagination.numPerPage, _ref1 = (pNum * pagination.numPerPage) + pagination.numPerPage - 1; _ref <= _ref1 ? _i <= _ref1 : _i >= _ref1; i = _ref <= _ref1 ? ++_i : --_i) {
-        if (all[filters.inRangeIndexes[i]]) {
-          pageUnits.push(all[filters.inRangeIndexes[i]]);
+      allu = allUnits();
+      for (i = _i = _ref = pNum * numPerPage, _ref1 = (pNum * numPerPage) + numPerPage - 1; _ref <= _ref1 ? _i <= _ref1 : _i >= _ref1; i = _ref <= _ref1 ? ++_i : --_i) {
+        if (allu[filters.inRangeIndexes[i]]) {
+          pageUnits.push(allu[filters.inRangeIndexes[i]]);
         }
       }
       return pageUnits;
     };
     currentPage = function() {
-      return selectPage(pagination.currentPage);
+      return selectPage(parseInt(pagination.currentPage));
     };
     splitArr = function(a) {
       var a1, midpoint;
@@ -177,39 +199,10 @@
         }
       }
     };
-    quickSort = function(arr, pos) {
-      var left, lsorted, midpoint, pivot, right, rsorted, temp;
-      if (arr.length <= 1) {
-        return arr;
-      } else {
-        midpoint = Math.floor(arr.length / 2);
-        pivot = arr[midpoint];
-        left = 0;
-        right = arr.length - 1;
-        while (left < midpoint - 1 && right > midpoint + 1) {
-          if (arr[length][pos] > pivot[pos] && arr[right][pos] < pivot[pos]) {
-            temp = arr[right];
-            arr[right] = arr[left];
-            arr[right] = temp;
-            left = left + 1;
-            right = right - 1;
-          } else {
-            if (arr[length][pos] > pivot[pos] && arr[right][pos] > pivot[pos]) {
-              right = right - 1;
-            } else if (arr[length][pos] < pivot[pos] && arr[right][pos] < pivot[pos]) {
-              left = left - 1;
-            }
-          }
-        }
-        lsorted = quickSort(arr.slice(0, +midpoint + 1 || 9e9), pos);
-        rsorted = quickSort(right.slice(midpoint, +(arr.length - 1) + 1 || 9e9), pos);
-        return lsorted.concat(rsorted);
-      }
-    };
     return {
-      all: all,
+      all: allUnits(),
       pagination: pagination,
-      reSort: sortedUnits(),
+      resort: sortUnits,
       filters: filters,
       applyFilters: applyFilters,
       load: load,

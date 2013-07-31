@@ -10,5 +10,9 @@ angular.module('Restate', ['Results', 'HomePage', 'RestateDirectives', 'ui.boots
       controller: 'ResultsCtrl'
       templateUrl: 'views/results/index.html'
     })
+    .when('/units/:id', {
+      controller: 'UnitsCtrl'
+      templateUrl: 'views/units/index.html'
+    })
     .otherwise redirectTo: '/'
  

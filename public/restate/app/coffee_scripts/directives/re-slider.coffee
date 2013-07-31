@@ -5,8 +5,7 @@
     scope: {
       min: '@'
       max: '@'
-      ngModelHi: '='
-      ngModelLo: '='
+      sliderChange: '&'
     }
     compile: (element, attrs, link)->
       low = document.createElement('span')
@@ -32,15 +31,9 @@
             Math.ceil((scope.max * element.slider('values')[0]) / 100)
         currentMaxValue = -> Math.ceil((scope.max * element.slider('values')[1]) / 100)
         
-        slider_low = ->
-          scope.$apply ->
-            scope.ngModelLo = currentMinValue()
-        slider_high = ->
-          scope.$apply ->
-            scope.ngModelHi = currentMaxValue()
+        
         element.slider
           stop: ->
-            slider_low()
-            slider_high()
+            scope.sliderChange({values: {lo:currentMinValue(),hi:currentMaxValue()}})
           
      
