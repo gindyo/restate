@@ -1,4 +1,4 @@
-angular.module('Results').service 'Units', (server)->
+angular.module('Results').service 'units', (server)->
   all = []
   meta = {}
   filters = {}
@@ -165,6 +165,7 @@ angular.module('Results').service 'Units', (server)->
   
 
   return { 
+    unitsLoaded: -> all.length > 0
     all:  allUnits()
     pagination:  pagination 
     resort:  sortUnits

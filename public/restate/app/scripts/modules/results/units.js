@@ -1,5 +1,5 @@
 (function() {
-  angular.module('Results').service('Units', function(server) {
+  angular.module('Results').service('units', function(server) {
     var all, allUnits, applyFilters, calculateNumOfPages, convertToUnit, currentPage, filters, getEdges, isInRange, load, mergeSort, meta, pagination, selectPage, sortUnits, splitArr, unitsInRange;
     all = [];
     meta = {};
@@ -200,6 +200,9 @@
       }
     };
     return {
+      unitsLoaded: function() {
+        return all.length > 0;
+      },
       all: allUnits(),
       pagination: pagination,
       resort: sortUnits,

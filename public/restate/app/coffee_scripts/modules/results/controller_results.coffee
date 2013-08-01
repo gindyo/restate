@@ -1,26 +1,32 @@
 Results = angular.module('Results', ['Server'])
 
-Results.controller 'ResultsCtrl', ($scope, server, Units)->
+Results.controller 'ResultsCtrl', ($scope, server, units, $routeParams)->
+  
   $scope.slidingMin = 0
   $scope.slidingMax = 0
-  $scope.units = Units
-  $scope.units.load(1)
+  $scope.units = units
+  $scope.filters = units.filters
+  $scope.pagination = units.pagination
+
+  $scope.units.applyFilters()
+  if !$scope.units.unitsLoaded()
+    $scope.units.load(1)
   $scope.$watch 'units.filters.inRangeIndexes[0] | json',->
     $scope.currentPage = $scope.units.currentPage()
     $scope.units.applyFilters()
   $scope.bathroomsSliderChange = (values)->
-    $scope.units.filters.ranges.bathrooms.current[0] = values.lo
-    $scope.units.filters.ranges.bathrooms.current[1] = values.hi
+    $scope.filters.ranges.bathrooms.current[0] = values.lo
+    $scope.filters.ranges.bathrooms.current[1] = values.hi
     $scope.units.applyFilters()
     updatePage()
   $scope.priceSliderChange = (values)->
-    $scope.units.filters.ranges.price.current[0] = values.lo
-    $scope.units.filters.ranges.price.current[1] = values.hi
+    units.filters.ranges.price.current[0] = $scope.filters.ranges.price.current[0] = values.lo
+    $scope.filters.ranges.price.current[1] = values.hi
     $scope.units.applyFilters()
     updatePage()
   $scope.bedroomsSliderChange = (values)->
-    $scope.units.filters.ranges.bedrooms.current[0] = values.lo
-    $scope.units.filters.ranges.bedrooms.current[1] = values.hi
+    $scope.filters.ranges.bedrooms.current[0] = values.lo
+    $scope.filters.ranges.bedrooms.current[1] = values.hi
     $scope.units.applyFilters()
     updatePage()
   updatePage = ->
@@ -28,7 +34,7 @@ Results.controller 'ResultsCtrl', ($scope, server, Units)->
       $scope.currentPage = $scope.units.currentPage()
   
   $scope.$watch 'units.pagination.currenPage + units.pagination.numPerPage',->
-    console.log $scope.units.pagination
+    console.log $scope.pagination
     $scope.currentPage = $scope.units.currentPage()
 
   $scope.$watch 'units.filters.orderBy',->
@@ -37,11 +43,11 @@ Results.controller 'ResultsCtrl', ($scope, server, Units)->
     $scope.currentPage = $scope.units.currentPage()
 
   $scope.changePage = (pNum)-> 
-    $scope.units.pagination.currentPage = pNum
+    $scope.pagination.currentPage = pNum
     $scope.currentPage = $scope.units.page(pNum)
   
   $scope.reverseOrder = ->
-    $scope.units.filters.reverseIt = !$scope.units.filters.reverseIt
+    $scope.filters.reverseIt = !$scope.filters.reverseIt
     $scope.units.resort()
     $scope.units.applyFilters()
     $scope.currentPage = $scope.units.currentPage()

@@ -1,1 +1,19 @@
 /* Will be compiled down to a single stylesheet with your sass files */
+#unit-tabset{
+  float: left;
+  width: 500px;
+  height: 300px;
+}
+#pictures-carousel{
+  height: 500px;
+}
+
+#pictures-carousel img{
+  width: 500px;
+}
+
+#dates-availability{
+  float: left;
+  margin-left: 20px;
+
+}

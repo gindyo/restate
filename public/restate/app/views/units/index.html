@@ -1,7 +1,15 @@
 <div id="unit-wrap">
-  <tabset>
-    <tab heading='Title'> Bla </tab>
-  </tabset>
+  <div id='unit-tabset' tabset>
+    <div tab heading='Pictures'>
+      <div id='pictures-carousel' carousel ng-cloak >
+        <div slide ng-repeat='pic in unit.pictures()'> <img src="{{pic}}"></div>
+      </div>
+    </div>
+    <div tab heading='Map'></div>
+  </div>
+  <div id='dates-availability'>
+    <div datepicker class="datepicker" min='today'></div>
+  </div>
 
 
 </div>

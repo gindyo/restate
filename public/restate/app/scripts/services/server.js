@@ -1,6 +1,6 @@
 (function() {
   angular.module('Server', []).service('server', function($http) {
-    var allAreas, areaUnits, unit;
+    var allAreas, areaUnits, getUnit;
     areaUnits = function(id, callback) {
       var returnedData, url,
         _this = this;
@@ -17,7 +17,7 @@
         return callback(data);
       });
     };
-    unit = function(id, callback) {
+    getUnit = function(id, callback) {
       var _this = this;
       return $http.get('/units/' + id).success(function(data, status) {
         return callback(data);
@@ -26,7 +26,7 @@
     return {
       areaUnits: areaUnits,
       allAreas: allAreas,
-      unit: unit
+      getUnit: getUnit
     };
   });
 

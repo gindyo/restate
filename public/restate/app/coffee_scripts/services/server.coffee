@@ -11,7 +11,7 @@ angular.module('Server', []).service 'server', ($http)->
     $http.get('/areas/all')
     .success (data, status)=>
         callback data
-  unit = (id, callback)->
+  getUnit = (id, callback)->
     $http.get('/units/'+id)
     .success (data, status)=>
         callback data
@@ -19,5 +19,5 @@ angular.module('Server', []).service 'server', ($http)->
   return {
     areaUnits: areaUnits
     allAreas: allAreas
-    unit: unit
+    getUnit: getUnit
   }

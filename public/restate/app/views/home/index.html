@@ -1,9 +1,9 @@
 <div id="home_content" "ng-app" = "HomePage">
   <div class="main" ng-controller = "HomeCtrl">
-      bla
-    <div id="sb" search-box items = "all_areas"
+    <div id="sb" search-box items = "allAreas"
       width = '500px'
       search-fields = 'city,url'></div>
     </div>
+    <input type='text' typeahead='city in allAreas | filter:$viewValue' ng-model='selected'>
   </div>
 </div>

@@ -24,6 +24,7 @@
         element.slider
           range: true
           values: [1, 100]
+          
         currentMinValue = -> 
           if element.slider('values')[0] == 0
             return scope.min
