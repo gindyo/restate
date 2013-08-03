@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('Restate', ['Results','Unit', 'HomePage', 'RestateDirectives', 'ui.bootstrap']).config ($routeProvider) ->
+angular.module('Restate', ['FloorPlan', 'Results','Unit', 'HomePage', 'RestateDirectives', 'ui.bootstrap', 'ui.date']).config ($routeProvider, $locationProvider) ->
   $routeProvider
     .when('/', {
       controller: 'HomeCtrl'
@@ -15,4 +15,4 @@ angular.module('Restate', ['Results','Unit', 'HomePage', 'RestateDirectives', 'u
       templateUrl: 'views/units/index.html'
     })
     .otherwise redirectTo: '/'
- 
+

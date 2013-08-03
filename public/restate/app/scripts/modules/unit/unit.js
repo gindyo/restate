@@ -1,5 +1,5 @@
 (function() {
-  angular.module('Unit').service('unit', function(server) {
+  angular.module('Unit').factory('unit', function(server) {
     var data, load, meta, pictures;
     data = [];
     meta = [];
@@ -23,7 +23,7 @@
     };
     return {
       load: load,
-      pictures: pictures
+      pictures: data.pictures
     };
   });
 

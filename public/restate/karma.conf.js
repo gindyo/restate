@@ -12,6 +12,7 @@ files = [
   'app/scripts/modules/**/*.js',
   'app/scripts/*.js',
   'app/scripts/**/**/*.js',
+  'app/scripts/**/**/**/*.js',
   'app/scripts/**/*.js',
   //'test/mock/**/*.js',
   'test/spec/**/**/*.js',

@@ -1,10 +1,11 @@
-angular.module('Unit').service 'unit', (server)->
+angular.module('Unit').factory 'unit', (server)->
   data = []
   meta = []
   load = (id)->
     server.getUnit id, (response)->
       data = response.unit
       meta = response.meta
+
   pictures = ->
     pictures = []
     if data[meta.pictures]
@@ -13,6 +14,6 @@ angular.module('Unit').service 'unit', (server)->
     return pictures
   {
     load: load
-    pictures: pictures
+    pictures: data.pictures
 
   }

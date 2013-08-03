@@ -16,6 +16,8 @@
     "angular-ui-bootstrap": "~0.4.0",
     "angular-slider": "~0.1.6",
     "jquery": "~1.9",
-    "jquery-ui": "~1.10.3"
+    "jquery-ui": "~1.10.3",
+    "angular-ui": "~0.4.0",
+    "angular-ui-date": "~0.0.3"
   }
 }

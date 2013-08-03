@@ -27,11 +27,11 @@ module.exports = function (grunt) {
         tasks: ['karma:unit:run']
       },
       coffee: {
-        files: ['<%= yeoman.app %>/coffee_scripts/{,*/}{,*/}*.coffee'],
+        files: ['<%= yeoman.app %>/coffee_scripts/{,*/}{,*/}{,*/}*.coffee'],
         tasks: ['coffee:dist']
       },
       coffeeTest: {
-        files: ['coffee_test/spec/{,*/}{,*/}*.coffee'],
+        files: ['coffee_test/spec/{,*/}{,*/}{,*/}*.coffee'],
         tasks: ['coffee:test']
       },
       compass: {
@@ -100,7 +100,7 @@ module.exports = function (grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= yeoman.app %>/scripts/{,*/}*.js'
+        '<%= yeoman.app %>/scripts/{,*/}{,*/}*.js'
       ]
     },
     karma: {
@@ -113,7 +113,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>/coffee_scripts',
-          src: '{,*/}{,*/}*.coffee',
+          src: '{,*/}{,*/}{,*/}*.coffee',
           dest: 'app/scripts',
           ext: '.js'
         }]
@@ -122,7 +122,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'coffee_test/spec',
-          src: '{,*/}{,*/}*.coffee',
+          src: '{,*/}{,*/}{,*/}*.coffee',
           dest: 'test/spec',
           ext: '.js'
         }]

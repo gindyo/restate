@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('Restate', ['Results', 'Unit', 'HomePage', 'RestateDirectives', 'ui.bootstrap']).config(function($routeProvider) {
+  angular.module('Restate', ['FloorPlan', 'Results', 'Unit', 'HomePage', 'RestateDirectives', 'ui.bootstrap', 'ui.date']).config(function($routeProvider, $locationProvider) {
     return $routeProvider.when('/', {
       controller: 'HomeCtrl',
       templateUrl: 'views/home/index.html'

@@ -27,11 +27,11 @@ module.exports = function (grunt) {
         tasks: ['karma:unit:run']
       },
       coffee: {
-        files: ['<%= yeoman.app %>/coffee_scripts/{,*/}{,*/}*.coffee'],
+        files: ['<%= yeoman.app %>/coffee_scripts/{,*/}*.coffee'],
         tasks: ['coffee:dist']
       },
       coffeeTest: {
-        files: ['coffee_test/spec/{,*/}{,*/}*.coffee'],
+        files: ['coffee_test/spec/{,*/}{,*/}{,*/}*.coffee'],
         tasks: ['coffee:test']
       },
       compass: {

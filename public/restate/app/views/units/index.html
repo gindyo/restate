@@ -1,15 +1,21 @@
 <div id="unit-wrap">
   <div id='unit-tabset' tabset>
+    <div tab heading='Floor Plan'>
+      <floor bathrooms = '3' bedrooms = '3' kitchen = '1' ></floor>
+    </div>
     <div tab heading='Pictures'>
-      <div id='pictures-carousel' carousel ng-cloak >
-        <div slide ng-repeat='pic in unit.pictures()'> <img src="{{pic}}"></div>
-      </div>
     </div>
     <div tab heading='Map'></div>
-  </div>
-  <div id='dates-availability'>
-    <div datepicker class="datepicker" min='today'></div>
-  </div>
+    <div tab heading='Available Dates'>  
+      <div type='text' ui-date="dateOptions"></div>
+    </div>
 
-
-</div>
+  </div>
+  
+ <div class="clear"></div>
+ </div>
+      <div id='pictures-carousel' carousel >
+        <ul>
+         <li slide ng-repeat='pic in pictures'> <img src="{{pic}}"></li>
+        </ul>
+      </div>
