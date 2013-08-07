@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 angular.module('Restate', ['FloorPlan', 'Results','Unit', 'HomePage', 'RestateDirectives', 'ui.bootstrap', 'ui.date']).config ($routeProvider, $locationProvider) ->
   $routeProvider
