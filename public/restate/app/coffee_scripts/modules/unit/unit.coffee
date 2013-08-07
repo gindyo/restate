@@ -1,19 +1,23 @@
 angular.module('Unit').factory 'unit', (server)->
-  data = []
-  meta = []
-  load = (id)->
-    server.getUnit id, (response)->
-      data = response.unit
-      meta = response.meta
-
-  pictures = ->
-    pictures = []
-    if data[meta.pictures]
-      for pic in data[meta.pictures]
-        pictures.push meta.imgDomain+pic
-    return pictures
-  {
-    load: load
-    pictures: data.pictures
-
-  }
+  unit = ->
+    unit = {}
+    unit.data = []
+    unit.meta = []
+    unit.pictures = []
+    load = (id)->
+      server.getUnit id, (response)->
+        unit.data = response.unit
+        unit.meta = response.meta
+        console.log unit.pictures
+        
+        if unit.data[unit.meta.pictures]
+          for pic in unit.data[unit.meta.pictures]
+            unit.pictures.push unit.meta.imgDomain+pic
+          return
+      return
+        
+    {
+      pictures: unit.pictures
+      load: load
+    }
+  return unit

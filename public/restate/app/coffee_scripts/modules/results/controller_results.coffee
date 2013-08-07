@@ -1,16 +1,27 @@
 Results = angular.module('Results', ['Server'])
-
-Results.controller 'ResultsCtrl', ($scope, server, units, $routeParams)->
+angular.module('Results').service('unitsCache', ->
+    units = null
+    area = null
+    return {
+      area : area
+      units: units
+    }
+  )
+Results.controller 'ResultsCtrl', ($scope, server, units, $routeParams, unitsCache)->
   
   $scope.slidingMin = 0
   $scope.slidingMax = 0
-  $scope.units = units
-  $scope.filters = units.filters
-  $scope.pagination = units.pagination
+  $scope.showProgressBar = -> !unitsCache.units || unitsCache.area != $routeParams.id
+  if !unitsCache.units || unitsCache.area != $routeParams.id
+    unitsCache.units = new units() 
+    unitsCache.area = $routeParams.id
+  $scope.units = unitsCache.units
+  $scope.filters = $scope.units.filters
+  $scope.pagination = $scope.units.pagination
 
   $scope.units.applyFilters()
   if !$scope.units.unitsLoaded()
-    $scope.units.load(1)
+    $scope.units.load(unitsCache.area)
   $scope.$watch 'units.filters.inRangeIndexes[0] | json',->
     $scope.currentPage = $scope.units.currentPage()
     $scope.units.applyFilters()
@@ -20,7 +31,7 @@ Results.controller 'ResultsCtrl', ($scope, server, units, $routeParams)->
     $scope.units.applyFilters()
     updatePage()
   $scope.priceSliderChange = (values)->
-    units.filters.ranges.price.current[0] = $scope.filters.ranges.price.current[0] = values.lo
+    $scope.units.filters.ranges.price.current[0] = $scope.filters.ranges.price.current[0] = values.lo
     $scope.filters.ranges.price.current[1] = values.hi
     $scope.units.applyFilters()
     updatePage()
@@ -33,12 +44,11 @@ Results.controller 'ResultsCtrl', ($scope, server, units, $routeParams)->
     $scope.$apply ->  
       $scope.currentPage = $scope.units.currentPage()
   
-  $scope.$watch 'units.pagination.currenPage + units.pagination.numPerPage',->
-    console.log $scope.pagination
+  $scope.$watch 'pagination.currentPage + pagination.numPerPage',->
+    console.log 'helll'
     $scope.currentPage = $scope.units.currentPage()
 
   $scope.$watch 'units.filters.orderBy',->
-    console.log 'hi'
     $scope.units.resort()
     $scope.currentPage = $scope.units.currentPage()
 

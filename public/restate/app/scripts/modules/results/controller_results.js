@@ -3,16 +3,33 @@
 
   Results = angular.module('Results', ['Server']);
 
-  Results.controller('ResultsCtrl', function($scope, server, units, $routeParams) {
+  angular.module('Results').service('unitsCache', function() {
+    var area, units;
+    units = null;
+    area = null;
+    return {
+      area: area,
+      units: units
+    };
+  });
+
+  Results.controller('ResultsCtrl', function($scope, server, units, $routeParams, unitsCache) {
     var updatePage;
     $scope.slidingMin = 0;
     $scope.slidingMax = 0;
-    $scope.units = units;
-    $scope.filters = units.filters;
-    $scope.pagination = units.pagination;
+    $scope.showProgressBar = function() {
+      return !unitsCache.units || unitsCache.area !== $routeParams.id;
+    };
+    if (!unitsCache.units || unitsCache.area !== $routeParams.id) {
+      unitsCache.units = new units();
+      unitsCache.area = $routeParams.id;
+    }
+    $scope.units = unitsCache.units;
+    $scope.filters = $scope.units.filters;
+    $scope.pagination = $scope.units.pagination;
     $scope.units.applyFilters();
     if (!$scope.units.unitsLoaded()) {
-      $scope.units.load(1);
+      $scope.units.load(unitsCache.area);
     }
     $scope.$watch('units.filters.inRangeIndexes[0] | json', function() {
       $scope.currentPage = $scope.units.currentPage();
@@ -25,7 +42,7 @@
       return updatePage();
     };
     $scope.priceSliderChange = function(values) {
-      units.filters.ranges.price.current[0] = $scope.filters.ranges.price.current[0] = values.lo;
+      $scope.units.filters.ranges.price.current[0] = $scope.filters.ranges.price.current[0] = values.lo;
       $scope.filters.ranges.price.current[1] = values.hi;
       $scope.units.applyFilters();
       return updatePage();
@@ -41,12 +58,11 @@
         return $scope.currentPage = $scope.units.currentPage();
       });
     };
-    $scope.$watch('units.pagination.currenPage + units.pagination.numPerPage', function() {
-      console.log($scope.pagination);
+    $scope.$watch('pagination.currentPage + pagination.numPerPage', function() {
+      console.log('helll');
       return $scope.currentPage = $scope.units.currentPage();
     });
     $scope.$watch('units.filters.orderBy', function() {
-      console.log('hi');
       $scope.units.resort();
       return $scope.currentPage = $scope.units.currentPage();
     });

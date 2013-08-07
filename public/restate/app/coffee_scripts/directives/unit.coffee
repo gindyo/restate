@@ -34,7 +34,7 @@
         border: 1px solid #a8a4a4;
         font-family: "helvetica";
         height: 250px;
-        width: 200px
+        width: 155px
         '     
       )
 

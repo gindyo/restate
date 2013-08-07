@@ -1,10 +1,37 @@
 (function() {
   angular.module('HomePage', ['Server']);
 
-  angular.module('HomePage').controller('HomeCtrl', function($scope, server) {
+  angular.module('HomePage').controller('HomeCtrl', function($scope, server, units, $timeout) {
+    var nextFeatured, units_inst;
+    $scope.styles = 'home-body';
+    units_inst = new units();
     $scope.all_areas = [];
-    return server.allAreas(function(data) {
+    $scope.featuredUnits = {};
+    units_inst.pagination.numPerPage = 1;
+    $scope.units = units_inst;
+    if (!$scope.units.unitsLoaded()) {
+      $scope.units.load(0);
+    }
+    $scope.featuredUnits['next'] = function() {
+      if ($scope.units.pagination.currentPage < $scope.units.pagination.numOfPages()) {
+        return $scope.units.pagination.currentPage = $scope.units.pagination.currentPage + 1;
+      } else {
+        return $scope.units.pagination.currentPage = 1;
+      }
+    };
+    nextFeatured = function() {
+      $scope.featuredUnits.next();
+      return $timeout(nextFeatured, 5000);
+    };
+    $timeout(nextFeatured, 5000);
+    server.allAreas(function(data) {
       return $scope.allAreas = data;
+    });
+    $scope.$watch('units.unitsLoaded()', function() {
+      return $scope.featuredUnits.currentPage = $scope.units.currentPage();
+    });
+    return $scope.$watch('units.pagination.currentPage', function() {
+      return $scope.featuredUnits.currentPage = $scope.units.currentPage();
     });
   });
 

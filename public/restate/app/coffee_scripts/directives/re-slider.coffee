@@ -5,6 +5,7 @@
     scope: {
       min: '@'
       max: '@'
+      range: '='
       sliderChange: '&'
     }
     compile: (element, attrs, link)->
@@ -18,13 +19,14 @@
       element.prepend(high)
       link = (scope, element, attrs)->
         @rangeWidth = 0
-        scope.$watch 'min + max', =>
+        range = false
+        scope.$watch 'min + max + range', =>
           @rangeWidth = scope.max - scope.min
-        element.slider()
-        element.slider
-          range: true
-          values: [1, 100]
-          
+          element.slider()
+          element.slider
+            range: scope.range
+            values: [1, 100]
+            
         currentMinValue = -> 
           if element.slider('values')[0] == 0
             return scope.min

@@ -1,9 +1,12 @@
-<div id="home_content" "ng-app" = "HomePage">
-  <div class="main" ng-controller = "HomeCtrl">
-    <div id="sb" search-box items = "allAreas"
-      width = '500px'
-      search-fields = 'city,url'></div>
-    </div>
-    <input type='text' typeahead='city in allAreas | filter:$viewValue' ng-model='selected'>
-  </div>
+<div id='home-page'>
+	<h4>City or Metro area:</h4>
+	<div id="sb" search-box items = "allAreas" search-fields = 'city,url'></div>
+ 
+<div id='featured'>   
+	<h4>Featured</h4>
+	<div class='gallery' on-unit-click='open_unit' re-units-gallery units='featuredUnits.currentPage'></div>
+	<div re-pager number-of-pages='units.pagination.numOfPages()' current-page="units.pagination.currentPage"  ></div>
+</div>
+<div class="clear"></div>
+<br>
 </div>

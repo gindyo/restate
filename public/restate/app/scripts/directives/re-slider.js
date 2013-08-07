@@ -5,6 +5,7 @@
       scope: {
         min: '@',
         max: '@',
+        range: '=',
         sliderChange: '&'
       },
       compile: function(element, attrs, link) {
@@ -18,16 +19,17 @@
         high.setAttribute('style', 'position: absolute; right: -20px; bottom: -20px');
         element.prepend(high);
         return link = function(scope, element, attrs) {
-          var currentMaxValue, currentMinValue,
+          var currentMaxValue, currentMinValue, range,
             _this = this;
           this.rangeWidth = 0;
-          scope.$watch('min + max', function() {
-            return _this.rangeWidth = scope.max - scope.min;
-          });
-          element.slider();
-          element.slider({
-            range: true,
-            values: [1, 100]
+          range = false;
+          scope.$watch('min + max + range', function() {
+            _this.rangeWidth = scope.max - scope.min;
+            element.slider();
+            return element.slider({
+              range: scope.range,
+              values: [1, 100]
+            });
           });
           currentMinValue = function() {
             if (element.slider('values')[0] === 0) {
