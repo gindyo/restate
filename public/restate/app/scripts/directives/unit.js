@@ -20,12 +20,12 @@
         p.innerHTML = '{{unit.address}}';
         a = document.createElement('a');
         a.setAttribute('href', '#/units/{{unit.id}}');
-        angular.element(a).append(img);
         angular.element(rentalUnit).append(h5);
         angular.element(rentalUnit).append(h4);
-        angular.element(rentalUnit).append(a);
+        angular.element(rentalUnit).append(img);
         angular.element(rentalUnit).append(p);
-        element.append(rentalUnit);
+        angular.element(a).append(rentalUnit);
+        element.append(a);
         element.addClass('round');
         angular.element(rentalUnit).attr('style', '\
         background: #FEFEFA;\
@@ -42,7 +42,7 @@
           float: right;\
         ');
         angular.element(h4).attr('style', '\
-          text-align: right;\
+          text-align: left;\
           width: 80px;\
           vertical-align: top\
         ');

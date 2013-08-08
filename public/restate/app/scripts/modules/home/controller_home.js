@@ -2,7 +2,7 @@
   angular.module('HomePage', ['Server']);
 
   angular.module('HomePage').controller('HomeCtrl', function($scope, server, units, $timeout) {
-    var nextFeatured, units_inst;
+    var nextFeatured, stop, units_inst;
     $scope.styles = 'home-body';
     units_inst = new units();
     $scope.all_areas = [];
@@ -19,9 +19,14 @@
         return $scope.units.pagination.currentPage = 1;
       }
     };
+    stop = 0;
     nextFeatured = function() {
+      console.log(stop);
       $scope.featuredUnits.next();
-      return $timeout(nextFeatured, 5000);
+      if (stop < 50) {
+        stop = stop + 1;
+        return $timeout(nextFeatured, 5000);
+      }
     };
     $timeout(nextFeatured, 5000);
     server.allAreas(function(data) {

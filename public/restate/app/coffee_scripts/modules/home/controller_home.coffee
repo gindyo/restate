@@ -10,15 +10,19 @@ angular.module('HomePage').controller 'HomeCtrl', ($scope, server, units, $timeo
   if !$scope.units.unitsLoaded()
     $scope.units.load(0)
 
+
   $scope.featuredUnits['next'] = ->
     if $scope.units.pagination.currentPage < $scope.units.pagination.numOfPages()
       $scope.units.pagination.currentPage = $scope.units.pagination.currentPage + 1
     else 
       $scope.units.pagination.currentPage = 1 
-
+  stop = 0
   nextFeatured = ->
+    console.log stop
     $scope.featuredUnits.next()
-    $timeout nextFeatured, 5000
+    if stop < 50
+      stop = stop+1
+      $timeout nextFeatured, 5000
   $timeout nextFeatured, 5000
 
   server.allAreas (data)->

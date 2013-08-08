@@ -1,0 +1,18 @@
+{
+  "name": "angular-google-maps",
+  "version": "0.0.0",
+  "main": "./src/angular-google-maps.js",
+  "dependencies": {
+    "angular": "~1.0.5"
+  },
+  "gitHead": "80ccdcd5014073ef173919b8b5783f960c32e1a9",
+  "readme": "angular-google-maps\n===================\n\n*As of now, all development is done in the [r1-dev branch](https://github.com/nlaplante/angular-google-maps/tree/r1-dev). \nPull requests for the master branch will be ignored. When reporting issues, please specify which branch you're experiencing\nit in. Issues found in master will be evaluated and if they're present in r1-dev, will be fixed. See \n[issue #64](https://github.com/nlaplante/angular-google-maps/issues/64).*\n\nAngularJS directives for the Google Maps Javascript API. Quite different from AngularUI's take on it. Up to you to decide what suits your needs.\n\nPlease see the example in the tree. And be sure to [RTFM](http://nlaplante.github.io/angular-google-maps \"read the documentation\")!\n\nPull requests more than welcome! Enjoy!\n",
+  "readmeFilename": "README.md",
+  "_id": "angular-google-maps@1.0.0",
+  "description": "angular-google-maps ===================",
+  "commit": "80ccdcd5014073ef173919b8b5783f960c32e1a9",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nlaplante/angular-google-maps.git"
+  }
+}

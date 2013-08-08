@@ -7,7 +7,9 @@
         </ul>
       </div>
     </div>
-    <div tab heading='Map'></div>
+    <div tab heading='Map' select='mapselected()'>
+      <div google-map center="center" draggable="true" zoom="zoom" markers="markers" mark-click="true" style="height: 400px" refresh='maprefresh'></div>
+    </div>
     <div tab heading='Available Dates'>  
       <div type='text' ui-date="dateOptions"></div>
     </div>

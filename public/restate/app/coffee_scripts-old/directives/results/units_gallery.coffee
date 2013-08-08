@@ -7,7 +7,7 @@
     }
     template: '
       <div ng-repeat="unit in page_units" class = "units_gallery_inner" style="margin: 5px; float: left">
-        <div unit="unit" on-unit-clicked = "open_unit"></div>
+        <div unit="unit" ng-click = "open_unit"></div>
       </div>
     '
 

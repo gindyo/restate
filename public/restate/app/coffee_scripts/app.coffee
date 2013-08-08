@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('Restate', ['FloorPlan', 'Results','Unit', 'HomePage', 'RestateDirectives', 'ui.bootstrap', 'ui.date']).config ($routeProvider, $locationProvider) ->
+angular.module('Restate', ['google-maps','FloorPlan', 'Results','Unit', 'HomePage', 'RestateDirectives', 'ui.bootstrap', 'ui.date']).config ($routeProvider, $locationProvider) ->
   $routeProvider
     .when('/', {
       controller: 'HomeCtrl'
