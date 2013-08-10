@@ -6,4 +6,4 @@
     compile: (element, attrs, link)->
       
       link = (scope, element, attrs)->
-        console.log scope.options43
+        

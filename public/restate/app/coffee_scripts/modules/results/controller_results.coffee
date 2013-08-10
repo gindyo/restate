@@ -45,7 +45,6 @@ Results.controller 'ResultsCtrl', ($scope, server, units, $routeParams, unitsCac
       $scope.currentPage = $scope.units.currentPage()
   
   $scope.$watch 'pagination.currentPage + pagination.numPerPage',->
-    console.log 'helll'
     $scope.currentPage = $scope.units.currentPage()
 
   $scope.$watch 'units.filters.orderBy',->

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="monroeLogo.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4964">
+      <stop
+         id="stop4972"
+         offset="0"
+         style="stop-color:#fffff7;stop-opacity:0.49803922;" />
+      <stop
+         style="stop-color:#feff8f;stop-opacity:0.74901961;"
+         offset="0.16983882"
+         id="stop4996" />
+      <stop
+         id="stop4998"
+         offset="0.65744048"
+         style="stop-color:#fdff5b;stop-opacity:0.8745098;" />
+      <stop
+         style="stop-color:#fdff18;stop-opacity:1;"
+         offset="1"
+         id="stop4968" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4964"
+       id="radialGradient4990"
+       cx="154.61147"
+       cy="494.10956"
+       fx="154.61147"
+       fy="494.10956"
+       r="28.745115"
+       gradientTransform="matrix(1.1713159,-0.01317814,0.01133319,1.0073302,-32.206617,-1.5713918)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="-29.947339"
+     inkscape:cy="849.8188"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#18348b;stroke-width:5.06303358;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 92.218377,259.03383 25.422663,-29.53922 c 0,0 -8.4792,20.99611 -1.74967,22.47661 6.72952,1.48049 24.63004,-24.09169 24.63004,-24.09169 l -0.23793,19.36141"
+       id="path4105"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccscc" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4913"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Charter;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion4915"><rect
+           id="rect4917"
+           width="139.28572"
+           height="48.57143"
+           x="89.64286"
+           y="116.6479" /></flowRegion><flowPara
+         id="flowPara4919"></flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:15.25079727px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#151604;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter"
+       x="127.67226"
+       y="261.91687"
+       id="text4921"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0059899,0.99404577)"><tspan
+         sodipodi:role="line"
+         id="tspan4923"
+         x="127.67226"
+         y="261.91687"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:309.99999046%;fill:#151604;fill-opacity:1;font-family:Century Schoolbook L;-inkscape-font-specification:Century Schoolbook L Medium">Monroe</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:21.31803703px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:-0.87936908px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:KacstLetter;-inkscape-font-specification:KacstLetter Medium"
+       x="87.525047"
+       y="276.29044"
+       id="text4948"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4950"
+         x="87.525047"
+         y="276.29044"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:-0.51163286px;word-spacing:-4.71661615px;fill:#999999;fill-opacity:1;font-family:Loma;-inkscape-font-specification:Loma"
+         dx="-0.13323773">real estate</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4952"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Charter;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Bitstream Charter;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion4954"><rect
+           id="rect4956"
+           width="242.14285"
+           height="139.28572"
+           x="57.857143"
+           y="212.36218" /></flowRegion><flowPara
+         id="flowPara4958"></flowPara></flowRoot>  </g>
+</svg>

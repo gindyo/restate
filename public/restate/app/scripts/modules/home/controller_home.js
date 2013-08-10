@@ -21,7 +21,6 @@
     };
     stop = 0;
     nextFeatured = function() {
-      console.log(stop);
       $scope.featuredUnits.next();
       if (stop < 50) {
         stop = stop + 1;

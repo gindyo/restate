@@ -9,7 +9,6 @@
     link: (scope, element, attrs)->
       pages = []
       scope.goTo = (page)->
-        console.log page
         scope.currentPage = page
         angular.element(pages[page]).css 'background', '#000000'
       scope.$watch 'numberOfPages', ->

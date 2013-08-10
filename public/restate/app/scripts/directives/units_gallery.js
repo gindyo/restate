@@ -8,7 +8,7 @@
         progressBar: '='
       },
       template: '\
-    <div style="width: 800px; float: left">\
+    <div style="width: 750px; float: left">\
       <div ng-repeat="unit in page_units" class="units_gallery_inner" style="margin: 5px; float: left" >\
         <div re-unit unit="unit" on-unit-clicked = "open_unit" unit-width ="unit.width"></div>\
       </div>\
@@ -31,7 +31,6 @@
             'left': '50%',
             'text-align': 'center'
           });
-          element.append(progress_wrap);
           d = $dialog.messageBox('Loading...', 'Loading...');
           d.open();
         }

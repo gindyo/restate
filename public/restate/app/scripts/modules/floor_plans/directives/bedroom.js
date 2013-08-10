@@ -4,9 +4,7 @@
       restrict: 'AC',
       scope: {},
       compile: function(element, attrs, link) {
-        return link = function(scope, element, attrs) {
-          return console.log(scope.options43);
-        };
+        return link = function(scope, element, attrs) {};
       }
     };
   });

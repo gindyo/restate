@@ -11,7 +11,6 @@
         var pages;
         pages = [];
         scope.goTo = function(page) {
-          console.log(page);
           scope.currentPage = page;
           return angular.element(pages[page]).css('background', '#000000');
         };

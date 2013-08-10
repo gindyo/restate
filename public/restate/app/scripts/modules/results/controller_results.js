@@ -59,7 +59,6 @@
       });
     };
     $scope.$watch('pagination.currentPage + pagination.numPerPage', function() {
-      console.log('helll');
       return $scope.currentPage = $scope.units.currentPage();
     });
     $scope.$watch('units.filters.orderBy', function() {

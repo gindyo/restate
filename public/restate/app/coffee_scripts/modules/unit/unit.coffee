@@ -8,7 +8,7 @@ angular.module('Unit').factory 'unit', (server)->
       server.getUnit id, (response)->
         unit.data = response.unit
         unit.meta = response.meta
-        console.log unit.pictures
+
         
         if unit.data[unit.meta.pictures]
           for pic in unit.data[unit.meta.pictures]

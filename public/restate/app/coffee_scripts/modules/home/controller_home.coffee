@@ -18,7 +18,6 @@ angular.module('HomePage').controller 'HomeCtrl', ($scope, server, units, $timeo
       $scope.units.pagination.currentPage = 1 
   stop = 0
   nextFeatured = ->
-    console.log stop
     $scope.featuredUnits.next()
     if stop < 50
       stop = stop+1

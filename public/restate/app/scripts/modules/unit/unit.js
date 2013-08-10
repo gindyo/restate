@@ -12,7 +12,6 @@
           var pic, _i, _len, _ref;
           unit.data = response.unit;
           unit.meta = response.meta;
-          console.log(unit.pictures);
           if (unit.data[unit.meta.pictures]) {
             _ref = unit.data[unit.meta.pictures];
             for (_i = 0, _len = _ref.length; _i < _len; _i++) {
