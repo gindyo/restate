@@ -1,35 +1,36 @@
 <div id="unit-page">
-  <div id='unit-tabset' tabset>
-    <div tab heading='Pictures'>
-      <div id='pictures-carousel' carousel >
-        <ul>
-         <li slide ng-repeat='pic in unit.pictures'> <div id="carousel-img" ><img ng-src="{{pic}}"></div></li>
-        </ul>
+  <div class="container">
+    <div id='unit-tabset' tabset>
+      <div tab heading='Pictures'>
+        <div id='pictures-carousel' carousel >
+          <ul>
+           <li slide ng-repeat='pic in unit.pictures'> <div id="carousel-img" ><img ng-src="{{pic}}"></div></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div tab heading='Map' select='mapselected()'>
-      <div google-map center="center" draggable="true" zoom="zoom" markers="markers" mark-click="true" style="height: 400px" refresh='maprefresh'></div>
-    </div>
-    <!-- <div tab heading='Available Dates'>  
-      <div type='text' ui-date="dateOptions"></div>
-    </div> -->
-    <div tab heading='Floor Plan'>
-      <div class="alert alert-danger">The floor plan renedred below does NOT match the actual floor layout. It is a generic drawing which only represents the type of rooms and their count on the given floor.   </div>
-      <div carousel>
-        <ul>
-          <li slide>
-            <floor bathrooms = '1' bedrooms = '3' kitchen = '1' livingroom=1></floor>
-          </li>
-          <li slide class='text-center'>
-            <floor bathrooms = '2' bedrooms = '6' kitchen = '1' ></floor>
-          </li>
-        </ul>
+      <div tab heading='Map' select='mapselected()'>
+        <div google-map center="center" draggable="true" zoom="zoom" markers="markers" mark-click="true" style="height: 400px" refresh='maprefresh'></div>
       </div>
+      <!-- <div tab heading='Available Dates'>  
+        <div type='text' ui-date="dateOptions"></div>
+      </div> -->
+      <div tab heading='Floor Plan'>
+        <div class="alert alert-danger">The floor plan renedred below does NOT match the actual floor layout. It is a generic drawing which only represents the type of rooms and their count on the given floor.   </div>
+        <div carousel>
+          <ul>
+            <li slide>
+              <floor bathrooms = '1' bedrooms = '3' kitchen = '1' livingroom=1></floor>
+            </li>
+            <li slide class='text-center'>
+              <floor bathrooms = '2' bedrooms = '6' kitchen = '1' ></floor>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </div>
+    
+   <div class="clear"></div>
 
   </div>
-  
- <div class="clear"></div>
-
- 
  </div>
