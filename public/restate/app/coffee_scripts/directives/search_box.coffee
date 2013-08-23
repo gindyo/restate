@@ -50,7 +50,7 @@ angular.module('RestateDirectives')
       attr.width = '200px' if !attr.width
       scope.show_suggestions = false
       scope.search_filt = (item)->
-        if scope.search && scope.search.length > 2
+        if scope.search && scope.search.length > 1
             regex = new RegExp(scope.search, 'i')
             for field in attr.searchFields.split ','
               if item[field].match(regex) != null

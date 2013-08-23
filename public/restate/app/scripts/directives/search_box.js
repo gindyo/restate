@@ -50,7 +50,7 @@
         scope.show_suggestions = false;
         return scope.search_filt = function(item) {
           var field, regex, _i, _len, _ref;
-          if (scope.search && scope.search.length > 2) {
+          if (scope.search && scope.search.length > 1) {
             regex = new RegExp(scope.search, 'i');
             _ref = attr.searchFields.split(',');
             for (_i = 0, _len = _ref.length; _i < _len; _i++) {

@@ -1,15 +1,28 @@
 <div id='home-page' >
 	<div class='container'>
-	<div id='search-group'>
-		<h4>City:</h4>
-		<div id="sb" search-box items = "allAreas" search-fields = 'city,url'></div>
- 	</div>
-<div id='featured'>   
-	<h4>Featured</h4>
-	<div class='gallery' on-unit-click='open_unit' re-units-gallery units='featuredUnits.currentPage'></div>
-	<div re-pager number-of-pages='units.pagination.numOfPages()' current-page="units.pagination.currentPage"  ></div>
-</div>
-<div class="clear"></div>
-<br>
-</div>
+
+		<div id='search-group'>
+			<h4>City or State:</h4>
+			<div id="sb" search-box items = "allAreas" search-fields = 'city,url'></div>
+	 	</div>
+		<div id='featured'>   
+			<h4>Featured Properties</h4>
+				<div id="pager-gallery">
+					<div class='gallery' on-unit-click='open_unit' re-units-gallery units='featuredUnits.currentPage'></div>
+					<div re-pager number-of-pages='units.pagination.numOfPages()' current-page="units.pagination.currentPage"  ></div>
+				</div>
+		<div class="clear">
+			<br>
+		</div>
+		<h4>Featured Areas</h4>
+		<div id="featured-areas">
+			<ul>
+				<li ng-repeat='area in allAreas'><a href="#/{{area.url}}">{{area.city}}</a></li>
+			</ul>
+		</div>
+		</div>
+
+		<div class="clear"></div>
+		<br>
+	</div>
 </div>
