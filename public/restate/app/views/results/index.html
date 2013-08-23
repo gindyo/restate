@@ -18,23 +18,47 @@
       </div>
 
     </div>
-    <select ng-model='pagination.numPerPage'>
-      <option value='8'>Limit results to</option>
-      <option value='4'>4</option>
-      <option value='8'>8</option>
-      <option value='16'>16</option>
-      <option value='32'>32</option>
-      <option value='64'>64</option>
-    </select>
-    <select ng-model='filters.orderBy'>
-      <option value='price'>Order by</option>
-      <option value='price'>price</option>
-      <option value='bathrooms'>bathrooms</option>
-      <option value='bedrooms'>bedrooms</option>
-      <option value='address'>address</option>
-    </select>
-    <i class='icon-arrow-{{filters.orderDirection()}}' ng-click='reverseOrder()'></i>
-    showing {{filters.inRangeIndexes.length}} from: {{pagination.totalUnits()}}
+    <table>
+      <tr>
+        <td>
+          <label >Limit results to:</label>
+        </td>
+        <td>
+            <label >Order by:</label>
+        </td>
+        <td>
+          
+        </td>
+        <td align='middle'>
+          Showing:
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <select ng-model='pagination.numPerPage'>
+            <option value='4'>4</option>
+            <option value='8'>8</option>
+            <option value='16'>16</option>
+            <option value='32'>32</option>
+            <option value='64'>64</option>
+          </select>
+        </td>
+        <td>
+            <select ng-model='filters.orderBy'>
+              <option value='price'>price</option>
+              <option value='bathrooms'>bathrooms</option>
+              <option value='bedrooms'>bedrooms</option>
+              <option value='address'>address</option>
+            </select>
+        </td>
+        <td align='middle'>
+          <i class='icon-arrow-{{filters.orderDirection()}}' ng-click='reverseOrder()'></i>
+        </td>
+        <td align='middle'>
+           {{filters.inRangeIndexes.length}} from: {{pagination.totalUnits()}}
+        </td>
+      </tr>
+    </table>
       <div class='gallery' on-unit-click='open_unit' re-units-gallery units='currentPage' progress-bar='showProgressBar()'></div>
       <div class='clear'></div>
       <div class='pagination_wrap'>
